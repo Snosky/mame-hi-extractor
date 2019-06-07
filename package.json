@@ -1,0 +1,15 @@
+{
+  "name": "mame-hi-extractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.0.7",
+    "typescript": "^3.5.1"
+  }
+}
