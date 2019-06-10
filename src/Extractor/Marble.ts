@@ -12,7 +12,7 @@ export default class Marble extends AbstractExtractor {
             this.output.default.push({
                 rank: rank++,
                 score: this.buffer.buffer.readIntBE(i, 3),
-                name: this.buffer.slice(i + 3, i + 3 + 2).decodeBase40()
+                name: this.buffer.slice(i + 3, 2).decodeBase40()
             });
         }
     }
