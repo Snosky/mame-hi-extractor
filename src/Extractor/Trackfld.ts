@@ -1,11 +1,13 @@
 import AbstractExtractor from "../AbstractExtractor";
 import {join} from "path";
+import Extractor from '../Decorator/Extractor';
 
+@Extractor({
+    name: 'trackfld',
+    hi: false,
+    nvram: 'nvram'
+})
 export default class Trackfld extends AbstractExtractor {
-    constructor(filePath: string) {
-        super(join(filePath, 'trackfld', 'nvram'));
-    }
-
     extract(): any {
         let currentByte = 1024; // Jump first 1024 Bytes
 
@@ -24,8 +26,8 @@ export default class Trackfld extends AbstractExtractor {
             for (let i = 0; i < 4; i++) { // All extras hiscores are by group of 4
                 this.output.extras[extra].push({
                     rank: i + 1,
-                    score: this.buffer.slice(currentByte,4).decodeBCD() / 100,
-                    name: this.asciiOffset(this.buffer.slice(currentByte + 4, 3).buffer.toString(), 48),
+                    score: this.nvram!.slice(currentByte,4).decodeBCD() / 100,
+                    name: this.asciiOffset(this.nvram!.slice(currentByte + 4, 3).buffer.toString(), 48),
                     scoreSuffix: ['run', 'hurdles'].indexOf(extra) >= 0 ? 'sec' : 'm'
                 });
                 currentByte += 8;
@@ -35,8 +37,8 @@ export default class Trackfld extends AbstractExtractor {
         for (let i = 0; i < 160; i++) { // Next 160 groups of 5 bytes are default scores
             this.output.default.push({
                 rank: i + 1,
-                score: Number.parseInt(this.buffer.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.buffer.slice(currentByte + 3, 2).decodeBase32()
+                score: Number.parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
+                name: this.nvram!.slice(currentByte + 3, 2).decodeBase32()
             });
             currentByte += 5;
         }
