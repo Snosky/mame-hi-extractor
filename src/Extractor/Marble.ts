@@ -1,5 +1,4 @@
 import AbstractExtractor from "../AbstractExtractor";
-import {join} from "path";
 import Extractor from '../Decorator/Extractor';
 
 @Extractor({
