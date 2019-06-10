@@ -25,7 +25,7 @@ export default class Trackfld extends AbstractExtractor {
                 this.output.extras[extra].push({
                     rank: i + 1,
                     score: this.buffer.slice(currentByte,4).decodeBCD() / 100,
-                    name: this.asciiOffset(this.buffer.slice(currentByte + 4, 7).buffer.toString(), 48),
+                    name: this.asciiOffset(this.buffer.slice(currentByte + 4, 3).buffer.toString(), 48),
                     scoreSuffix: ['run', 'hurdles'].indexOf(extra) >= 0 ? 'sec' : 'm'
                 });
                 currentByte += 8;
@@ -36,7 +36,7 @@ export default class Trackfld extends AbstractExtractor {
             this.output.default.push({
                 rank: i + 1,
                 score: Number.parseInt(this.buffer.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.buffer.slice(currentByte + 3, 5).decodeBase32()
+                name: this.buffer.slice(currentByte + 3, 2).decodeBase32()
             });
             currentByte += 5;
         }
