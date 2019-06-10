@@ -83,4 +83,18 @@ export default class MHEBuffer {
         }
         return result;
     }
+
+    /**
+     * Skip even or odd bytes
+     * @param even
+     */
+    public byteSkip(even: boolean) {
+        let buffer = [];
+        for (let i = 0; i < this.buffer.length; i++) {
+            if ((!even && i % 2) || (even && i % 2 === 0)) {
+                buffer.push(this.buffer[i]);
+            }
+        }
+        return new MHEBuffer(Buffer.from(buffer));
+    }
 }
