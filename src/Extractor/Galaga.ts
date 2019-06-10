@@ -18,7 +18,8 @@ export default class Galaga extends AbstractExtractor {
             currentByte += 6;
         }
         for (let i = 0; i < 5; i++) {
-            this.output.default[i].name = this.asciiOffset(this.buffer.slice(currentByte, currentByte += 3).buffer.toString(), 55);
+            this.output.default[i].name = this.asciiOffset(this.buffer.slice(currentByte, 3).buffer.toString(), 55);
+            currentByte += 3;
         }
     }
 }
