@@ -12,7 +12,7 @@ export default class Extractor extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.buffer.buffer.readIntBE(currentByte, 4).toString(16)),
-                name: this.buffer.slice(currentByte + 4, currentByte + 7).buffer.toString(),
+                name: this.buffer.slice(currentByte + 4, 7).buffer.toString(),
                 // TODO : Extras data like GRADE
             });
             currentByte += 8;
