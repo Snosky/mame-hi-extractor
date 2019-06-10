@@ -9,3 +9,9 @@ interface Score {
     name: string;
     scoreSuffix?: string;
 }
+
+declare interface ExtractorOptions {
+    name: string,
+    hi?: boolean,
+    nvram?: string;
+}
