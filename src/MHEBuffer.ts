@@ -5,8 +5,8 @@ export default class MHEBuffer {
         this.buffer = Buffer.from(file);
     }
 
-    public slice(begin?: number, end?: number) {
-        return new MHEBuffer(this.buffer.slice(begin, end));
+    public slice(begin?: number, size?: number) {
+        return new MHEBuffer(this.buffer.slice(begin, size ? begin! + size : size));
     }
 
     public trim(trimNeedle: number): MHEBuffer {
