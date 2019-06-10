@@ -63,7 +63,7 @@ export default class MHEBuffer {
     }
 
     /**
-     * Decode a BCD buffer
+     * Decode a BCD buffer in Big Endian
      */
     public decodeBCD(): number {
         let result = .0;
@@ -74,11 +74,7 @@ export default class MHEBuffer {
     }
 
     /**
-     * TODO : Not working
-     * bcd-le:
-     *  endianness="little_endian"
-     *  nibble-skip="odd"
-     *  base="16"
+     * Decode a BCD in Little Endian
      */
     public decodeBCDLE(): number {
         let result = .0;
