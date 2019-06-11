@@ -18,7 +18,7 @@ export default class Gng extends AbstractExtractor {
             this.scores.default.push({
                 rank: positions[i] ? positions[i] : 10,
                 score: parseInt(this.hi!.buffer.readIntBE(currentByte, 4).toString(16)),
-                name: this.hi!.slice(currentByte + 4, 3).buffer.toString()
+                name: this.hi!.slice(currentByte + 4, 3).buffer.toString() // TODO : Charset
             });
             currentByte += 7;
         }
