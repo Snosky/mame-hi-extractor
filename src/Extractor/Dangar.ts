@@ -4,7 +4,7 @@ import Extractor from "../Decorator/Extractor";
 @Extractor({
     name: 'dangar'
 })
-export default class Dangar extends AbstractExtractor {]
+export default class Dangar extends AbstractExtractor {
 
     /**
      * Scores are reversed, latest to first, so we doing the loop in reverse
