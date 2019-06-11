@@ -112,4 +112,9 @@ export default class MHEBuffer {
         }
         return new MHEBuffer(Buffer.from(buffer));
     }
+
+    public byteMap(fn: (byte: number) => number) {
+        this.buffer = Buffer.from(this.buffer.map(fn));
+        return this;
+    }
 }
