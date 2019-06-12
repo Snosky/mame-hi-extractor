@@ -124,4 +124,8 @@ export default class MHEBuffer {
     public readIntBE() {
         return this.buffer.readIntBE(0, this.buffer.byteLength);
     }
+
+    public readIntLE() {
+        return this.buffer.readIntLE(0, this.buffer.byteLength);
+    }
 }
