@@ -11,7 +11,7 @@ export default class Gunsmoke extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.slice(currentBytes + 1, 7).nibbleSkip(false).readIntBE().toString(16)),
-                name: this.asciiOffset(this.hi!.slice(currentBytes + 10, 6).byteSkip(false).buffer.toString(), 55),
+                name: this.asciiOffset(this.hi!.slice(currentBytes + 10, 6).byteSkip(false).buffer.toString(), 55), // TODO : Charset
             });
             currentBytes += 16;
         }
