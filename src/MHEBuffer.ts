@@ -98,8 +98,6 @@ export default class MHEBuffer {
         return new MHEBuffer(Buffer.from(buffer));
     }
 
-
-    // FIXME - Not working if odd number of bytes
     public nibbleSkip(even: boolean) {
         let buffer = [];
         let tmp = 0;
@@ -111,6 +109,9 @@ export default class MHEBuffer {
                 tmp ^= this.buffer[i] & (even ? 0xF0 : 0x0F);
                 buffer.push(tmp);
             }
+        }
+        if (this.buffer.length % 2 !== 0) {
+            buffer.push(tmp << 4);
         }
         return new MHEBuffer(Buffer.from(buffer));
     }
