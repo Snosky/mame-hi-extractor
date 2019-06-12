@@ -122,7 +122,6 @@ export default class MHEBuffer {
     }
 
     public readIntBE() {
-        console.log(this.buffer.byteLength);
         return this.buffer.readIntBE(0, this.buffer.byteLength);
     }
 }
