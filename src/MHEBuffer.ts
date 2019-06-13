@@ -128,4 +128,12 @@ export default class MHEBuffer {
     public readIntLE() {
         return this.buffer.readIntLE(0, this.buffer.byteLength);
     }
+
+    public toStringLE(offset = 0) {
+        let ret = '';
+        for (let i = 0; i < this.buffer.byteLength; i++) {
+            ret = String.fromCharCode(this.buffer.readUIntLE(i, 1) + offset) + ret;
+        }
+        return ret;
+    }
 }
