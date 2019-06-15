@@ -18,7 +18,10 @@ export default class Jumpbug extends AbstractExtractor {
         }
         console.log(new MHEBuffer(
             Buffer.from(this.hi!.slice(0, 6).readIntLE().toString(16), 'hex')
-        ).nibbleSkip(true));
+	    ).nibbleSkip(true));
+
+
+	// Lire droite a gauche, et inverser les groupes de 4 bits
 
         let a = this.hi!.slice(6, 6).nibbleSkip(false);
         console.log(a.buffer);
