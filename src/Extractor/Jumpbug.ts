@@ -16,20 +16,24 @@ export default class Jumpbug extends AbstractExtractor {
                 name: this.hi!.slice(12 + i * 3, 3).toStringLE(-63)
             });
         }
-        console.log(new MHEBuffer(
-            Buffer.from(this.hi!.slice(0, 6).readIntLE().toString(16), 'hex')
-	    ).nibbleSkip(true));
 
+        this.scores.default[0].score = this.getScore(21);
+        this.scores.default[1].score = this.getScore(0);
+        this.scores.default[2].score = this.getScore(6);
+    }
 
-	// Lire droite a gauche, et inverser les groupes de 4 bits
-
-        let a = this.hi!.slice(6, 6).nibbleSkip(false);
-        console.log(a.buffer);
-        console.log(a.readIntLE().toString(16));
-        for (let i = a.buffer.byteLength - 1; i >= 0; i--) {
-            console.log(a.buffer.readIntLE(i, 1).toString(16));
+    /**
+     * Weird "low-endian" original buffer after nibble skip loop like "00 65 03", so you have to read left ro right but reverse nibbles
+     * @param startByte
+     * @TODO : Maybe make it global, or use a function to swap nibbles
+     */
+    protected getScore(startByte: number): number {
+        let ret = '';
+        let buf = this.hi!.slice(startByte, 6).nibbleSkip(false);
+        for (let i = buf.buffer.byteLength - 1; i >= 0; i--) {
+            let byte = buf.buffer.readUIntLE(i, 1);
+            ret += (byte & 0x0F).toString(16) + (byte >> 4).toString(16);
         }
-
-        this.scores.default[0].score = parseInt(this.hi!.slice(0, 6).nibbleSkip(false).buffer.readUIntLE(0, 3).toString(16))
+        return parseInt(ret);
     }
 }
