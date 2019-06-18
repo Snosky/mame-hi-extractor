@@ -98,20 +98,20 @@ export default class MHEBuffer {
         return new MHEBuffer(Buffer.from(buffer));
     }
 
-    public nibbleSkip(even: boolean) {
+    public nibbleSkip(even = false) {
         let buffer = [];
         let tmp = 0;
+        const isEven = this.buffer.length % 2 === 0;
         for (let i = 0; i < this.buffer.length; i++) {
-            if ((i + 1) % 2 !== 0 ) {
+            if (isEven && (i + 1) % 2 !== 0 ) {
+                tmp = this.buffer[i] & (even ? 0xF0 : 0x0F);
+            } else if (!isEven && (i + 1) % 2 === 0 && i !== 0) {
                 tmp = this.buffer[i] & (even ? 0xF0 : 0x0F);
             } else {
                 tmp = tmp << 4;
                 tmp ^= this.buffer[i] & (even ? 0xF0 : 0x0F);
                 buffer.push(tmp);
             }
-        }
-        if (this.buffer.length % 2 !== 0) {
-            buffer.push(tmp << 4);
         }
         return new MHEBuffer(Buffer.from(buffer));
     }
