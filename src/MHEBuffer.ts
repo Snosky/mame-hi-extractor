@@ -136,4 +136,35 @@ export default class MHEBuffer {
         }
         return ret;
     }
+
+    /**
+     * Return the buffer hexa as a number
+     * Example : Buffer = 0x0872 => return 872
+     * @param rtl right-to-left, reverse te returned value, ex: Buffer = 0x0872 => return 2780
+     */
+    public toHexNumber(rtl = false) {
+        let str = this.buffer.toString('hex');
+        if (rtl) {
+            str = str.split('').reverse().join('')
+        }
+        return parseInt(str);
+    }
+
+    /**
+     * Swap x number of byte
+     * Example: swap = 2, buffer = 0xF0E1 => return 0xE1F0
+     * Example: swap = 4, buffer = 0xF0E1D2C3 => return 0xC3D2E1F0
+     * @param swap
+     */
+    public byteSwap(swap: number) {
+        let ret: number[] = [];
+        for (let i = 0; i < this.buffer.length; i += swap) {
+            let tmp = this.slice(i, swap);
+            for (let y = tmp.buffer.length - 1; y >= 0; y--) {
+                ret.push(tmp.buffer[y])
+            }
+        }
+        this.buffer = Buffer.from(ret);
+        return this;
+    }
 }
