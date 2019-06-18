@@ -167,4 +167,23 @@ export default class MHEBuffer {
         this.buffer = Buffer.from(ret);
         return this;
     }
+
+    /**
+     * Remove unwanted bytes
+     * Example: buffer = 0x52502424, filteredBytes = 0x24 => return 0x5250
+     * @param filteredBytes
+     */
+    public byteFilter(filteredBytes: number|number[]) {
+        let result: number[] = [];
+        if (!Array.isArray(filteredBytes)) {
+            filteredBytes = [filteredBytes];
+        }
+        for (let byte of this.buffer) {
+            if (filteredBytes.indexOf(byte) < 0) {
+                result.push(byte);
+            }
+        }
+        this.buffer = Buffer.from(result);
+        return this;
+    }
 }
