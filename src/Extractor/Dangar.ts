@@ -5,6 +5,10 @@ import Extractor from "../Decorator/Extractor";
     name: 'dangar'
 })
 export default class Dangar extends AbstractExtractor {
+    protected charset = {
+        0x20: ' ',
+        0x2E: '.'
+    };
 
     /**
      * Scores are reversed, latest to first, so we doing the loop in reverse
@@ -15,7 +19,7 @@ export default class Dangar extends AbstractExtractor {
             this.scores.default.push({
                 rank: Math.abs(i - 11),
                 score: parseInt(this.hi!.buffer.readIntBE(currentByte - 13, 3).toString(16)) * 100,
-                name: this.hi!.slice(currentByte - 10, 3).buffer.toString(), // TODO : charset
+                name: this.hi!.slice(currentByte - 10, 3).toString(this.charset),
             });
             currentByte -= 13;
         }
