@@ -20,7 +20,7 @@ export default class Extractor1943 extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(i * 16, 8).decodeBCD(),
-                name: this.asciiOffset(this.hi!.slice(i * 16 + 8, 3).buffer.toString(), 55)
+                name: this.hi!.slice(i * 16 + 8, 3).toString(this.charset, 55)
             })
         }
     }
