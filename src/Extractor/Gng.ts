@@ -5,6 +5,10 @@ import Extractor from "../Decorator/Extractor";
     name: 'gng'
 })
 export default class Gng extends AbstractExtractor {
+    protected charset = {
+        0x1D: '.'
+    };
+
     extract(): any {
         let positions: number[] = [];
 
@@ -18,7 +22,7 @@ export default class Gng extends AbstractExtractor {
             this.scores.default.push({
                 rank: positions[i] ? positions[i] : 10,
                 score: parseInt(this.hi!.buffer.readIntBE(currentByte, 4).toString(16)),
-                name: this.hi!.slice(currentByte + 4, 3).buffer.toString() // TODO : Charset
+                name: this.hi!.slice(currentByte + 4, 3).toString(this.charset)
             });
             currentByte += 7;
         }
