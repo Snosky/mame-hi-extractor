@@ -13,7 +13,7 @@ export default class Jumpbug extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: 0,
-                name: this.hi!.slice(12 + i * 3, 3).toStringLE(-63)
+                name: this.hi!.slice(12 + i * 3, 3).toStringLE({},-63)
             });
         }
 
