@@ -28,17 +28,4 @@ export default abstract class AbstractExtractor {
     public get scores(): Output {
         return this.output;
     }
-
-    /**
-     * ASCII Offset
-     * @param str
-     * @param offset
-     */
-    protected asciiOffset(str: string, offset: number) {
-        let result = '';
-        for (let char of str) {
-            result += String.fromCharCode(char.charCodeAt(0) + offset);
-        }
-        return result;
-    }
 }
