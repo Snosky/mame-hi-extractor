@@ -6,6 +6,15 @@ import Extractor from "../Decorator/Extractor";
     name: 'rtype'
 })
 export default class Rtype extends AbstractExtractor {
+    protected charset = {
+        0x20: ' ',
+        0x21: '!',
+        0x2C: ',',
+        0x2E: '.',
+        0x3E: '&gt;',
+        0x3F: '?',
+    };
+
     extract(): any {
         let currentByte = 4;
         for (let i = 0; i < 10; i++) {
