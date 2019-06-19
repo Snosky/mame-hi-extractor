@@ -15,7 +15,7 @@ export default class Aburner extends AbstractExtractor {
              this.scores.default.push({
                  rank: i + 1,
                  score: parseInt(this.hi!.buffer.readIntBE(currentByte, 4).toString(16)),
-                 name: this.hi!.slice(currentByte + 4, 4).buffer.toString(),
+                 name: this.hi!.slice(currentByte + 4, 4).toString(),
                  // TODO : Extras, HIT, MEDALS
              });
              currentByte += 14;

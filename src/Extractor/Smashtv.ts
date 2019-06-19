@@ -13,7 +13,7 @@ export default class Smashtv extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.nvram!.slice(currentByte, 8).byteSkip(true).readIntBE().toString(16)),
-                name: this.nvram!.slice(currentByte + 8, 6).byteSkip(true).buffer.toString()
+                name: this.nvram!.slice(currentByte + 8, 6).byteSkip(true).toString()
             });
             currentByte += 16;
         }

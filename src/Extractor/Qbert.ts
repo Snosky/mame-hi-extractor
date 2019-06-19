@@ -13,7 +13,7 @@ export default class Qbert extends AbstractExtractor {
             console.log(this.nvram!.slice(currentByte + 3, 7).byteFilter(0x24).nibbleSkip().buffer);
             this.scores.default.push({
                 rank: i + 1,
-                name: this.asciiOffset(this.nvram!.slice(currentByte, 3).buffer.toString(), 55),
+                name: this.nvram!.slice(currentByte, 3).toString({}, 55),
                 score: this.nvram!.slice(currentByte + 3, 7).byteFilter(0x24).nibbleSkip().toHexNumber()
             });
             currentByte += 10;

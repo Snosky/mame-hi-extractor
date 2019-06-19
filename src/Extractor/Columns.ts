@@ -11,7 +11,7 @@ export default class Columns extends AbstractExtractor {
             currentByte++; // Skip header
             this.scores.default.push({
                 rank: i + 1,
-                name: this.hi!.slice(currentByte, 3).buffer.toString(),
+                name: this.hi!.slice(currentByte, 3).toString(),
                 score: this.hi!.buffer.readIntBE(currentByte + 4, 4),
                 // TODO : Extras
             });

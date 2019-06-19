@@ -12,7 +12,7 @@ export default class Arkanoid extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.hi!.slice(currentByte + 4, 3).buffer.toString()
+                name: this.hi!.slice(currentByte + 4, 3).toString()
             });
             currentByte += 7;
         }

@@ -13,7 +13,7 @@ export default class Defender extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: this.nvram!.slice(currentByte, 6).decodeBCD(),
-                name: this.nvram!.slice(currentByte + 6, 6).nibbleSkip(false).buffer.toString()
+                name: this.nvram!.slice(currentByte + 6, 6).nibbleSkip(false).toString()
             });
             currentByte += 12;
         }

@@ -10,7 +10,7 @@ export default class Snowbro2 extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.slice(i * 4, 4).readIntBE().toString(16)),
-                name: this.hi!.slice(i * 4 + 20 + 1, 3).buffer.toString()
+                name: this.hi!.slice(i * 4 + 20 + 1, 3).toString()
             });
         }
     }
