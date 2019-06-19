@@ -8,13 +8,17 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'eeprom'
 })
 export default class Paperboy extends AbstractExtractor {
+    protected charset = {
+        0x20: ' '
+    };
+
     extract(): any {
         let currentByte = 66;
         for (let i = 0; i < 30; i++) {
             this.scores.default.push({
                 rank: i + 1,
                 score: this.nvram!.slice(currentByte, 3).readIntBE(),
-                name: this.nvram!.slice(currentByte + 3, 3).buffer.toString() // TODO : Charset
+                name: this.nvram!.slice(currentByte + 3, 3).toString(this.charset)
             });
             currentByte += 6;
         }
