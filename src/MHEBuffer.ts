@@ -129,12 +129,13 @@ export default class MHEBuffer {
         return this.buffer.readIntLE(0, this.buffer.byteLength);
     }
 
-    public toStringLE(offset = 0) {
-        let ret = '';
-        for (let i = 0; i < this.buffer.byteLength; i++) {
-            ret = String.fromCharCode(this.buffer.readUIntLE(i, 1) + offset) + ret;
+    public toStringLE(charset?: {[key:number]: string}, offset = 0) {
+        let newBuffer = [];
+        for (let i = this.buffer.byteLength - 1; i >= 0; i--) {
+            newBuffer.push(this.buffer.readUIntLE(i, 1));
         }
-        return ret;
+        this.buffer = Buffer.from(newBuffer);
+        return this.toString(charset, offset);
     }
 
     /**
