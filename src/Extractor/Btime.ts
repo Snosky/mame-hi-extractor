@@ -6,6 +6,14 @@ import Extractor from '../Decorator/Extractor';
     hi: true
 })
 export default class Btime extends AbstractExtractor {
+    protected charset = {
+        0x00: ' ',
+        0xCC: '-',
+        0xCD: ',',
+        0xCE: '?',
+        0xCF: '&two-exclamations;',
+    };
+
     extract() {
         let currentByte = 3; // Skip TOP SCORE
         for (let i = 0; i < 5; i++) {
@@ -18,7 +26,7 @@ export default class Btime extends AbstractExtractor {
         }
         currentByte += 3; // Skip Separator
         for (let i = 0; i < 5; i++) {
-            this.scores.default[i].name = this.asciiOffset(this.hi!.slice(currentByte, 3).buffer.toString(), 54); // TODO : Charset
+            this.scores.default[i].name = this.hi!.slice(currentByte, 3).toString(this.charset, 54); // TODO : Charset
         }
     }
 }
