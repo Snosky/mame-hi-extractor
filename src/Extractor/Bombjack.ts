@@ -20,7 +20,7 @@ export default class Bombjack extends AbstractExtractor {
         currentByte += 10;
         for (let i = 0; i < 10; i++) {
             currentByte += 2; // Skip RANK
-            this.scores.default[i].name = this.hi!.slice(currentByte, 6).byteSkip(true).buffer.toString();
+            this.scores.default[i].name = this.hi!.slice(currentByte, 6).byteSkip(true).toString();
             currentByte += 8;
         }
     }

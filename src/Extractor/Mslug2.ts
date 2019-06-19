@@ -11,7 +11,7 @@ export default class Mslug2 extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.slice(currentByte, 4).readIntBE().toString(16)),
-                name: this.hi!.slice(currentByte + 4, 3).buffer.toString()
+                name: this.hi!.slice(currentByte + 4, 3).toString()
             });
             currentByte += 10;
         }

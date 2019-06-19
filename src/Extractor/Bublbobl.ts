@@ -12,7 +12,7 @@ export default class Bublbobl extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.buffer.readIntLE(currentByte, 3).toString(16)) * 10,
-                name: this.hi!.slice(currentByte + 4, 3).buffer.toString(),
+                name: this.hi!.slice(currentByte + 4, 3).toString(),
                 // TODO : Extras SCORE
             });
             currentByte += 7;

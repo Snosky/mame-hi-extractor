@@ -11,7 +11,7 @@ export default class Chasehq extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.buffer.readIntBE(byte, 4).toString(16)),
-                name: this.hi!.slice(byte + 6, 3).buffer.toString()
+                name: this.hi!.slice(byte + 6, 3).toString()
             });
         }
     }

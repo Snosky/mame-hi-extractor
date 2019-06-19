@@ -10,7 +10,7 @@ export default class Insectx extends AbstractExtractor {
             this.scores.default.push({
                 rank: i + 1,
                 score: parseInt(this.hi!.slice(i * 8, 3).readIntBE().toString(16)) * 100,
-                name: this.hi!.slice(i * 8 + 4, 3).buffer.toString()
+                name: this.hi!.slice(i * 8 + 4, 3).toString()
             })
         }
     }

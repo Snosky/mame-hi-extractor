@@ -12,7 +12,7 @@ export default class Mk extends AbstractExtractor {
         for (let i = 0; i < 15; i++) {
             this.scores.default.push({
                 rank: i + 1,
-                name: this.asciiOffset(this.nvram!.slice(currentByte, 6).byteSkip(true).buffer.toString(), 65),
+                name: this.nvram!.slice(currentByte, 6).byteSkip(true).toString({}, 65),
                 score: this.nvram!.slice(currentByte + 10, 8).byteSkip(true).readIntLE()
             });
             currentByte += 18;

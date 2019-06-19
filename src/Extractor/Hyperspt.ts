@@ -27,7 +27,7 @@ export default class Hyperspt extends AbstractExtractor {
                 this.output.extras[extra].push({
                     rank: i + 1,
                     score: this.formatScore(this.nvram!.slice(currentByte,5).decodeBCD(), extra),
-                    name: this.asciiOffset(this.nvram!.slice(currentByte + 5, 3).buffer.toString(), 48),
+                    name: this.nvram!.slice(currentByte + 5, 3).toString({}, 48),
                     scoreSuffix: this.getScoreSuffix(extra)
                 });
                 currentByte += 8;
@@ -39,7 +39,7 @@ export default class Hyperspt extends AbstractExtractor {
             this.output.extras['todays'].push({
                 rank: i + 1,
                 score: parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.asciiOffset(this.nvram!.slice(currentByte + 3, 3).buffer.toString(), 48)
+                name: this.nvram!.slice(currentByte + 3, 3).toString({}, 48)
             });
             currentByte += 6;
         }
@@ -47,7 +47,7 @@ export default class Hyperspt extends AbstractExtractor {
             this.output.default.push({
                 rank: i + 1,
                 score: parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.asciiOffset(this.nvram!.slice(currentByte + 3, 3).buffer.toString(), 48)
+                name: this.nvram!.slice(currentByte + 3, 3).toString({}, 48)
             });
             currentByte += 6;
         }

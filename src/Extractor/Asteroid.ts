@@ -18,7 +18,7 @@ export default class Asteroid extends AbstractExtractor {
         }
         currentBytes += 3; //Separator
         for (let i = 0; i < 10; i++) {
-            this.scores.default[i].name = this.asciiOffset(this.hi!.slice(currentBytes, 3).buffer.toString(), 54);
+            this.scores.default[i].name = this.hi!.slice(currentBytes, 3).toString({}, 54);
             currentBytes += 3;
         }
     }

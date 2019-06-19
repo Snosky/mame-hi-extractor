@@ -12,7 +12,7 @@ export default class Altbeast extends AbstractExtractor {
             this.scores.default.push({
                 rank: i,
                 score: parseInt(this.hi!.buffer.readIntBE(currentByte, 4).toString(16)),
-                name: this.hi!.slice(currentByte + 5, 3).buffer.toString(),
+                name: this.hi!.slice(currentByte + 5, 3).toString(),
                 // TODO : Extras data stage
             });
             currentByte += 8;

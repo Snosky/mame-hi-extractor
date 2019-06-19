@@ -26,7 +26,7 @@ export default class Trackfld extends AbstractExtractor {
                 this.output.extras[extra].push({
                     rank: i + 1,
                     score: this.nvram!.slice(currentByte,4).decodeBCD() / 100,
-                    name: this.asciiOffset(this.nvram!.slice(currentByte + 4, 3).buffer.toString(), 48),
+                    name: this.nvram!.slice(currentByte + 4, 3).toString({}, 48),
                     scoreSuffix: ['run', 'hurdles'].indexOf(extra) >= 0 ? 'sec' : 'm'
                 });
                 currentByte += 8;
