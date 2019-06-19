@@ -186,4 +186,22 @@ export default class MHEBuffer {
         this.buffer = Buffer.from(result);
         return this;
     }
+
+    public toString(charset?: {[key:number]: string}, offset?: number) {
+        offset = offset || 0;
+        if (charset && Object.entries(charset).length) {
+            let newBuffer = [];
+            for (const buf of this.buffer) {
+                let i = newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf + offset));
+            }
+            this.buffer = Buffer.from(newBuffer);
+        } else if (offset) {
+            let newBuffer = [];
+            for (const buf of this.buffer) {
+                let i = newBuffer.push(buf + offset);
+            }
+            this.buffer = Buffer.from(newBuffer);
+        }
+        return this.buffer.toString();
+    }
 }
