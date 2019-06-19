@@ -5,6 +5,15 @@ import Extractor from "../Decorator/Extractor";
     name: 'popeye'
 })
 export default class Popeye extends AbstractExtractor {
+    protected charset = {
+        0x24: '/',
+        0x25: ',',
+        0x26: '.',
+        0x27: '*',
+        0x28: '&four-lines;',
+        0x29: ' ',
+    };
+
     extract(): any {
         let currentByte = 1;
         let positions: number[] = [];
@@ -17,7 +26,7 @@ export default class Popeye extends AbstractExtractor {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: positions[i] + 1,
-                name: this.asciiOffset(this.hi!.slice(currentByte, 3).buffer.toString(), 55), // TODO : charset
+                name: this.hi!.slice(currentByte, 3).toString(this.charset, 55),
                 score: parseInt(this.hi!.slice(currentByte + 3, 3).readIntLE().toString(16))
             });
             currentByte += 6;
