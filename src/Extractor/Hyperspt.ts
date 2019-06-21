@@ -34,16 +34,7 @@ export default class Hyperspt extends AbstractExtractor {
             }
         }
         currentByte += 6; // Skip a spacing (6B)
-        this.output.extras['todays'] = [];
-        for (let i = 0; i < 3; i++) {
-            this.output.extras['todays'].push({
-                rank: i + 1,
-                score: parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
-                name: this.nvram!.slice(currentByte + 3, 3).toString({}, 48)
-            });
-            currentByte += 6;
-        }
-        for (let i = 0; i < 20; i++) { // Next 160 groups of 5 bytes are default scores
+        for (let i = 0; i < 23; i++) { // Next 160 groups of 5 bytes are default scores
             this.output.default.push({
                 rank: i + 1,
                 score: parseInt(this.nvram!.buffer.readIntBE(currentByte, 3).toString(16)) * 10,
