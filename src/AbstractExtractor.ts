@@ -28,4 +28,8 @@ export default abstract class AbstractExtractor {
     public get scores(): Output {
         return this.output;
     }
+
+    public get name(): string {
+        return this.gameName;
+    }
 }
