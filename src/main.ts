@@ -9,7 +9,7 @@ export default class MameHiExtractor {
 
     public get(romName: string) {
         if (extractors[romName]) {
-            console.log(extractors[romName].init(this.dir).scores);
+            return extractors[romName].init(this.dir).scores;
         }
     }
 }
