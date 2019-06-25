@@ -1,4 +1,5 @@
 export default class MameHiExtractor {
     protected dir: string;
-    get(romName: string): void;
+    constructor(dir: string);
+    get(romName: string): Output | undefined;
 }
