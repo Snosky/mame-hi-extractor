@@ -20,7 +20,7 @@ module.exports = {
         filename: "MameHiExtractor.js",
         path: path.resolve(__dirname, 'dist'),
         library: 'MameHiExtractor',
-        libraryExport: 'MameHiExtractor',
+        libraryTarget: "umd",
         umdNamedDefine: true
     },
     devtool: "source-map"
