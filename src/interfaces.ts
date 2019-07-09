@@ -1,16 +1,16 @@
-interface Output {
+export interface Output {
     default: Score[];
     extras?: {[id: string]: Score[]};
 }
 
-interface Score {
+export interface Score {
     rank: number;
     score: number;
     name: string;
     scoreSuffix?: string;
 }
 
-declare interface ExtractorOptions {
+export interface ExtractorOptions {
     name: string,
     hi?: boolean,
     nvram?: string;
