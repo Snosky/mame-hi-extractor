@@ -1,6 +1,7 @@
 import {readFileSync} from "fs";
 import MHEBuffer from "./MHEBuffer";
 import {join} from 'path';
+import {Output} from "./interfaces";
 
 export default abstract class AbstractExtractor {
     private gameName = '';

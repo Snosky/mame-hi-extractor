@@ -1,3 +1,5 @@
+import {ExtractorOptions} from "../interfaces";
+
 export default function Extractor(options: ExtractorOptions) {
     return <T extends {new(...args:any[]):{}}>(constructor:T) => {
         return class extends constructor {
