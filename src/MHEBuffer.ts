@@ -188,18 +188,48 @@ export default class MHEBuffer {
         return this;
     }
 
+    /**
+     * Buffer to string where a char is on 1 byte (8 bits)
+     * @param charset
+     * @param offset
+     */
     public toString(charset?: {[key:number]: string}, offset?: number) {
         offset = offset || 0;
         if (charset && Object.entries(charset).length) {
             let newBuffer = [];
             for (const buf of this.buffer) {
-                let i = newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf + offset));
+                newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf + offset));
             }
             this.buffer = Buffer.from(newBuffer);
         } else if (offset) {
             let newBuffer = [];
             for (const buf of this.buffer) {
                 let i = newBuffer.push(buf + offset);
+            }
+            this.buffer = Buffer.from(newBuffer);
+        }
+        return this.buffer.toString();
+    }
+
+    /**
+     * Buffer to string where a char is on 2 bytes (16 bits)
+     * @param charset
+     * @param offset
+     */
+    public toString16(charset?: {[key: number]: string}, offset?: number) {
+        offset = offset || 0;
+        if (charset && Object.entries(charset).length) {
+            let newBuffer = [];
+            for (let i = 0; i < this.buffer.byteLength; i += 2) {
+                const uint16 = this.slice(i, 2).buffer.readUInt16BE(0);
+                newBuffer.push(charset[uint16] ? charset[uint16].charCodeAt(0) : (uint16 + offset));
+            }
+            this.buffer = Buffer.from(newBuffer);
+        } else if (offset) {
+            let newBuffer = [];
+            for (let i = 0; i < this.buffer.byteLength; i += 2) {
+                const uint16 = this.slice(i, 2).buffer.readUInt16BE(0);
+                newBuffer.push(uint16 + offset);
             }
             this.buffer = Buffer.from(newBuffer);
         }
