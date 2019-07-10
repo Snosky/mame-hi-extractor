@@ -49,7 +49,6 @@ import Trackfld from "./Extractor/Trackfld";
 import Tutankhm from "./Extractor/Tutankhm";
 import Dangar from "./Extractor/Dangar";
 import Dkong3 from "./Extractor/Dkong3";
-import Puckman from "./Extractor/Puckman";
 import Digdug from "./Extractor/Digdug";
 import Joust from "./Extractor/Joust";
 import Mslug2 from "./Extractor/Mslug2";
@@ -133,7 +132,6 @@ let extractorsArray = [
     new Paperboy(),
     new Pengo(),
     new Popeye(),
-    new Puckman(),
     new Punchout(),
     new Qbert(),
     new Robocop(),
