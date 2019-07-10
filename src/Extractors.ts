@@ -71,11 +71,18 @@ import Pacmania from "./Extractor/Pacmania";
 import Spang from "./Extractor/Spang";
 import Invadpt2 from "./Extractor/Invadpt2";
 import AbstractExtractor from "./AbstractExtractor";
+import Aburner2 from "./Extractor/Aburner2";
+import Ddragon2 from "./Extractor/Ddragon2";
+import Galagamk from "./Extractor/Galagamk";
+import Hsf2 from "./Extractor/Hsf2";
+import Mk2 from "./Extractor/Mk2";
+import Mslug from "./Extractor/Mslug";
 
 let extractorsArray = [
     new Extractor1941(),
     new Extractor1943(),
     new Aburner(),
+    new Aburner2(),
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
@@ -88,6 +95,7 @@ let extractorsArray = [
     new Columns(),
     new Dangar(),
     new Ddragon(),
+    new Ddragon2(),
     new Ddsom(),
     new Defender(),
     new Digdug(),
@@ -97,9 +105,11 @@ let extractorsArray = [
     new Donpachi(),
     new Frogger(),
     new Galaga(),
+    new Galagamk(),
     new Galaxian(),
     new Gng(),
     new Gunsmoke(),
+    new Hsf2(),
     new Hyperspt(),
     new Insectx(),
     new Invaddlx(),
@@ -113,6 +123,8 @@ let extractorsArray = [
     new Marble(),
     new Mario(),
     new Mk(),
+    new Mk2(),
+    new Mslug(),
     new Mslug2(),
     new Mwalk(),
     new Pacland(),
