@@ -44,7 +44,6 @@ import Pacland from "./Extractor/Pacland";
 import Bosco from "./Extractor/Bosco";
 import Shinobi from "./Extractor/Shinobi";
 import Robotron from "./Extractor/Robotron";
-import Galaxian from "./Extractor/Galaxian";
 import Trackfld from "./Extractor/Trackfld";
 import Tutankhm from "./Extractor/Tutankhm";
 import Dangar from "./Extractor/Dangar";
@@ -53,7 +52,6 @@ import Digdug from "./Extractor/Digdug";
 import Joust from "./Extractor/Joust";
 import Mslug2 from "./Extractor/Mslug2";
 import Btime from "./Extractor/Btime";
-import Frogger from "./Extractor/Frogger";
 import Jack from "./Extractor/Jack";
 import Suprmrio from "./Extractor/Suprmrio";
 import Donpachi from "./Extractor/Donpachi";
@@ -102,10 +100,8 @@ let extractorsArray = [
     new Dkong3(),
     new Dkongjr(),
     new Donpachi(),
-    new Frogger(),
     new Galaga(),
     new Galagamk(),
-    new Galaxian(),
     new Gng(),
     new Gunsmoke(),
     new Hsf2(),
