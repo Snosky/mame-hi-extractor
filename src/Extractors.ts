@@ -74,8 +74,10 @@ import Galagamk from "./Extractor/Galagamk";
 import Hsf2 from "./Extractor/Hsf2";
 import Mk2 from "./Extractor/Mk2";
 import Mslug from "./Extractor/Mslug";
+import Extractor88Games from "./Extractor/88games";
 
 let extractorsArray = [
+    new Extractor88Games(),
     new Extractor1941(),
     new Extractor1943(),
     new Aburner(),
