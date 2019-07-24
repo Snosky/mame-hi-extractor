@@ -20,6 +20,7 @@ export default abstract class AbstractExtractor {
         if (this.nvramName) {
             this.nvram = new MHEBuffer(readFileSync(join(filePath, 'nvram', this.gameName, this.nvramName)))
         }
+        this.output = {default: []};
         this.extract();
         return this;
     }
