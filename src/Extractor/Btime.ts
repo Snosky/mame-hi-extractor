@@ -11,7 +11,7 @@ export default class Btime extends AbstractExtractor {
         0xCC: '-',
         0xCD: ',',
         0xCE: '?',
-        0xCF: '&two-exclamations;',
+        0xCF: '!',
     };
 
     extract() {
