@@ -45,6 +45,7 @@ export default class Extractor88Games extends AbstractExtractor {
             }
 
         }
+        currentByte+=72; // Jump extras scores
 
         for (let i = 0; i < 100; i++) {
             this.scores.default.push({
