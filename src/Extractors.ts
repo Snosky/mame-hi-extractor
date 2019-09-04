@@ -76,6 +76,7 @@ import Mk2 from "./Extractor/Mk2";
 import Mslug from "./Extractor/Mslug";
 import Extractor88Games from "./Extractor/88games";
 import Outrun from "./Extractor/Outrun";
+import Outzone from "./Extractor/Outzone";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -126,6 +127,7 @@ let extractorsArray = [
     new Mslug2(),
     new Mwalk(),
     new Outrun(),
+    new Outzone(),
     new Pacland(),
     new Pacmania(),
     new Pang(),
