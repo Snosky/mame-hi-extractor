@@ -235,4 +235,21 @@ export default class MHEBuffer {
         }
         return this.buffer.toString();
     }
+
+    /**
+     * Filter byte from a mask
+     * Ex: Buffer = 0x05FF5B, mask = "FF00FF" => output = 0x055B
+     * @param mask
+     */
+    public byteMask(mask: string) {
+        const maskBuffer = Buffer.from(mask, 'hex');
+        let result = [];
+        for (let i = 0; i < this.buffer.byteLength; i++) {
+            if (maskBuffer[i] === 0) continue;
+            result.push(this.buffer[i]);
+        }
+        console.log(result);
+        this.buffer = Buffer.from(result);
+        return this;
+    }
 }
