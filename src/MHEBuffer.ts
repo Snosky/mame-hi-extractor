@@ -248,7 +248,6 @@ export default class MHEBuffer {
             if (maskBuffer[i] === 0) continue;
             result.push(this.buffer[i]);
         }
-        console.log(result);
         this.buffer = Buffer.from(result);
         return this;
     }
