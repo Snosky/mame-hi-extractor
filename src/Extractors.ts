@@ -77,6 +77,7 @@ import Mslug from "./Extractor/Mslug";
 import Extractor88Games from "./Extractor/88games";
 import Outrun from "./Extractor/Outrun";
 import Outzone from "./Extractor/Outzone";
+import Bouldash from "./Extractor/Bouldash";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -89,6 +90,7 @@ let extractorsArray = [
     new Asteroid(),
     new Bombjack(),
     new Bosco(),
+    new Bouldash(),
     new Btime(),
     new Bublbobl(),
     new Centiped(),
