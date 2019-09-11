@@ -78,6 +78,7 @@ import Extractor88Games from "./Extractor/88games";
 import Outrun from "./Extractor/Outrun";
 import Outzone from "./Extractor/Outzone";
 import Bouldash from "./Extractor/Bouldash";
+import Snowbros from "./Extractor/Snowbros";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -147,6 +148,7 @@ let extractorsArray = [
     new Simpsons(),
     new Smashtv(),
     new Snowbro2(),
+    new Snowbros(),
     new Spang(),
     new Spf2t(),
     new Starwars(),
