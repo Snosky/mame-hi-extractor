@@ -4,7 +4,7 @@ import Extractor from "../Decorator/Extractor";
 @Extractor({
     name: 'intrepid'
 })
-export default class Intreprid extends AbstractExtractor {
+export default class Intrepid extends AbstractExtractor {
     protected charset = {
         0xFD: '-',
         0x24: ' ',
