@@ -17,7 +17,7 @@ export default class Snowbros extends AbstractExtractor {
         }
         currentByte += 10; // Skip floor
         for (let i = 0; i < 5; i++) {
-            this.output.default[i].name = this.hi!.slice(currentByte, 6).byteSkip(false).toString16();
+            this.output.default[i].name = this.hi!.slice(currentByte, 6).byteSkip(false).toString();
             currentByte += 6;
         }
     }
