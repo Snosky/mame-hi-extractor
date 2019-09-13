@@ -14,7 +14,7 @@ export default class Bouldash extends AbstractExtractor {
             this.output.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(currentByte, 3).toHexNumber() * 10,
-                name: this.hi!.slice(currentByte + 5, 3).toString16()
+                name: this.hi!.slice(currentByte + 5, 3).toString()
             });
             currentByte += 10;
         }
