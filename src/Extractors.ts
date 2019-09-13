@@ -79,6 +79,7 @@ import Outrun from "./Extractor/Outrun";
 import Outzone from "./Extractor/Outzone";
 import Bouldash from "./Extractor/Bouldash";
 import Snowbros from "./Extractor/Snowbros";
+import Intrepid from "./Extractor/Intrepid";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -114,6 +115,7 @@ let extractorsArray = [
     new Hsf2(),
     new Hyperspt(),
     new Insectx(),
+    new Intrepid(),
     new Invaddlx(),
     new Invadpt2(),
     new Jack(),
