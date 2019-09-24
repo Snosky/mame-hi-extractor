@@ -85,8 +85,10 @@ import Ikari from "./Extractor/Ikari";
 import Avsp from "./Extractor/Avsp";
 import Extractor1942 from "./Extractor/1942";
 import Extractor1944 from "./Extractor/1944";
+import Extractor10yard from "./Extractor/10yard";
 
 let extractorsArray = [
+    new Extractor10yard(),
     new Extractor88Games(),
     new Extractor1941(),
     new Extractor1942(),
