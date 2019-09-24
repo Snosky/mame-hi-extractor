@@ -82,6 +82,7 @@ import Snowbros from "./Extractor/Snowbros";
 import Intrepid from "./Extractor/Intrepid";
 import Mercs from "./Extractor/Mercs";
 import Ikari from "./Extractor/Ikari";
+import Avsp from "./Extractor/Avsp";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -92,6 +93,7 @@ let extractorsArray = [
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
+    new Avsp(),
     new Bombjack(),
     new Bosco(),
     new Bouldash(),
