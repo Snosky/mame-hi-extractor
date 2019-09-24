@@ -152,6 +152,14 @@ export default class MHEBuffer {
     }
 
     /**
+     * Reverse byte array
+     */
+    public reverse() {
+        this.buffer = this.buffer.reverse();
+        return this;
+    }
+
+    /**
      * Swap x number of byte
      * Example: swap = 2, buffer = 0xF0E1 => return 0xE1F0
      * Example: swap = 4, buffer = 0xF0E1D2C3 => return 0xC3D2E1F0
