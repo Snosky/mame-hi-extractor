@@ -24,7 +24,7 @@ export default class Extractor1942 extends AbstractExtractor {
 
     extract(): any {
         let currentByte = 0;
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 25; i++) {
             this.scores.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(currentByte + 1, 4).toHexNumber(),
