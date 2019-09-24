@@ -80,6 +80,7 @@ import Outzone from "./Extractor/Outzone";
 import Bouldash from "./Extractor/Bouldash";
 import Snowbros from "./Extractor/Snowbros";
 import Intrepid from "./Extractor/Intrepid";
+import Mercs from "./Extractor/Mercs";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -126,6 +127,7 @@ let extractorsArray = [
     new Mappy(),
     new Marble(),
     new Mario(),
+    new Mercs(),
     new Mk(),
     new Mk2(),
     new Mslug(),
