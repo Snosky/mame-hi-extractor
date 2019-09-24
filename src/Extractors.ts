@@ -83,10 +83,12 @@ import Intrepid from "./Extractor/Intrepid";
 import Mercs from "./Extractor/Mercs";
 import Ikari from "./Extractor/Ikari";
 import Avsp from "./Extractor/Avsp";
+import Extractor1942 from "./Extractor/1942";
 
 let extractorsArray = [
     new Extractor88Games(),
     new Extractor1941(),
+    new Extractor1942(),
     new Extractor1943(),
     new Aburner(),
     new Aburner2(),
