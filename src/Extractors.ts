@@ -81,6 +81,7 @@ import Bouldash from "./Extractor/Bouldash";
 import Snowbros from "./Extractor/Snowbros";
 import Intrepid from "./Extractor/Intrepid";
 import Mercs from "./Extractor/Mercs";
+import Ikari from "./Extractor/Ikari";
 
 let extractorsArray = [
     new Extractor88Games(),
@@ -115,6 +116,7 @@ let extractorsArray = [
     new Gunsmoke(),
     new Hsf2(),
     new Hyperspt(),
+    new Ikari(),
     new Insectx(),
     new Intrepid(),
     new Invaddlx(),
