@@ -89,8 +89,10 @@ import Extractor10yard from "./Extractor/10yard";
 import Extractor1945kiii from "./Extractor/1945kiii";
 import Batman from "./Extractor/Batman";
 import Extractor19xx from "./Extractor/19xx";
+import Extractor4dwarrio from "./Extractor/4dwarrio";
 
 let extractorsArray = [
+    new Extractor4dwarrio(),
     new Extractor10yard(),
     new Extractor19xx(),
     new Extractor88Games(),
