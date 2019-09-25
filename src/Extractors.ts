@@ -87,6 +87,7 @@ import Extractor1942 from "./Extractor/1942";
 import Extractor1944 from "./Extractor/1944";
 import Extractor10yard from "./Extractor/10yard";
 import Extractor1945kiii from "./Extractor/1945kiii";
+import Batman from "./Extractor/Batman";
 
 let extractorsArray = [
     new Extractor10yard(),
@@ -102,6 +103,7 @@ let extractorsArray = [
     new Arkanoid(),
     new Asteroid(),
     new Avsp(),
+    new Batman(),
     new Bombjack(),
     new Bosco(),
     new Bouldash(),
