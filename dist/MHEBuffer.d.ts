@@ -5,7 +5,7 @@ export default class MHEBuffer {
     slice(begin?: number, size?: number): MHEBuffer;
     trim(trimNeedle: number): MHEBuffer;
     decodeBase40(): string;
-    decodeBase32(): string;
+    decodeBase32(isLE?: boolean): string;
     /**
      * Decode a BCD buffer in Big Endian
      */
@@ -20,6 +20,10 @@ export default class MHEBuffer {
      */
     byteSkip(even: boolean): MHEBuffer;
     nibbleSkip(even?: boolean): MHEBuffer;
+    /**
+     * Reverse nibbles, 0xF0 become 0x0F
+     */
+    nibbleSwap(): MHEBuffer;
     byteMap(fn: (byte: number) => number): this;
     readIntBE(): number;
     readIntLE(): number;
@@ -53,10 +57,11 @@ export default class MHEBuffer {
      * Buffer to string where a char is on 1 byte (8 bits)
      * @param charset
      * @param offset
+     * @param step
      */
     toString(charset?: {
         [key: number]: string;
-    }, offset?: number): string;
+    }, offset?: number, step?: number): string;
     /**
      * Buffer to string where a char is on 2 bytes (16 bits)
      * @param charset
