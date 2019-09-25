@@ -48,14 +48,18 @@ export default class MHEBuffer {
         return result;
     }
 
-    public decodeBase32(): string {
+    public decodeBase32(isLE: boolean = false): string {
         const ctable = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '2', '3', '4', '5', '6', '7'];
         let result = '';
         let len = Math.floor(this.buffer.byteLength * 8 / 5);
-        let buffer = this.buffer.readIntBE(0, this.buffer.byteLength);
+        let buffer = isLE ? this.readIntLE() : this.readIntBE();
         while (len) {
             const charId = (buffer & 31) - 1;
-            result = (ctable[charId] ? ctable[charId] : ' ') + result;
+            if (isLE) {
+                result += ctable[charId] ? ctable[charId] : ' '
+            } else {
+                result = (ctable[charId] ? ctable[charId] : ' ') + result;
+            }
             buffer = buffer >> 5;
             len--;
         }
@@ -112,6 +116,20 @@ export default class MHEBuffer {
                 tmp ^= this.buffer[i] & (even ? 0xF0 : 0x0F);
                 buffer.push(tmp);
             }
+        }
+        return new MHEBuffer(Buffer.from(buffer));
+    }
+
+    /**
+     * Reverse nibbles, 0xF0 become 0x0F
+     */
+    public nibbleSwap() {
+        let buffer = [];
+        for (const buf of this.buffer) {
+            let tmp = 0;
+            tmp = (buf & 0xF0) >> 4;
+            tmp ^= (buf & 0x0F) << 4;
+            buffer.push(tmp);
         }
         return new MHEBuffer(Buffer.from(buffer));
     }
@@ -200,22 +218,16 @@ export default class MHEBuffer {
      * Buffer to string where a char is on 1 byte (8 bits)
      * @param charset
      * @param offset
+     * @param step
      */
-    public toString(charset?: {[key:number]: string}, offset?: number) {
-        offset = offset || 0;
-        if (charset && Object.entries(charset).length) {
-            let newBuffer = [];
-            for (const buf of this.buffer) {
-                newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf + offset));
-            }
-            this.buffer = Buffer.from(newBuffer);
-        } else if (offset) {
-            let newBuffer = [];
-            for (const buf of this.buffer) {
-                let i = newBuffer.push(buf + offset);
-            }
-            this.buffer = Buffer.from(newBuffer);
+    public toString(charset: {[key:number]: string} = {}, offset: number = 0, step: number = 1) {
+        step = step || 1;
+
+        let newBuffer = [];
+        for (const buf of this.buffer) {
+            newBuffer.push(charset[buf] ? charset[buf].charCodeAt(0) : (buf / step + offset))
         }
+        this.buffer = Buffer.from(newBuffer);
         return this.buffer.toString();
     }
 
