@@ -86,6 +86,7 @@ import Avsp from "./Extractor/Avsp";
 import Extractor1942 from "./Extractor/1942";
 import Extractor1944 from "./Extractor/1944";
 import Extractor10yard from "./Extractor/10yard";
+import Extractor1945kiii from "./Extractor/1945kiii";
 
 let extractorsArray = [
     new Extractor10yard(),
@@ -94,6 +95,7 @@ let extractorsArray = [
     new Extractor1942(),
     new Extractor1943(),
     new Extractor1944(),
+    new Extractor1945kiii(),
     new Aburner(),
     new Aburner2(),
     new Altbeast(),
