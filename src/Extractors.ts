@@ -91,6 +91,7 @@ import Batman from "./Extractor/Batman";
 import Extractor19xx from "./Extractor/19xx";
 import Extractor4dwarrio from "./Extractor/4dwarrio";
 import Extractor8ballact from "./Extractor/8ballact";
+import Abcop from "./Extractor/Abcop";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -103,6 +104,7 @@ let extractorsArray = [
     new Extractor1943(),
     new Extractor1944(),
     new Extractor1945kiii(),
+    new Abcop(),
     new Aburner(),
     new Aburner2(),
     new Altbeast(),
