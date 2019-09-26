@@ -104,6 +104,7 @@ import Airattck from "./Extractor/Airattck";
 import Airbustr from "./Extractor/Airbustr";
 import Airduel from "./Extractor/Airduel";
 import Airwolf from "./Extractor/Airwolf";
+import Ajax from "./Extractor/Ajax";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -131,6 +132,7 @@ let extractorsArray = [
     new Airbustr(),
     new Airduel(),
     new Airwolf(),
+    new Ajax(),
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
