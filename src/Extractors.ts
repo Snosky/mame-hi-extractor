@@ -97,6 +97,7 @@ import Actionhw from "./Extractor/Actionhw";
 import Ad2083 from "./Extractor/Ad2083";
 import Aerofgt from "./Extractor/Aerofgt";
 import Aerofgts from "./Extractor/Aerofgts";
+import Afighter from "./Extractor/Afighter";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -117,6 +118,7 @@ let extractorsArray = [
     new Ad2083(),
     new Aerofgt(),
     new Aerofgts(),
+    new Afighter(),
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
