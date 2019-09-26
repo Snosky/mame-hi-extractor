@@ -16,7 +16,8 @@ export default class Anteater extends AbstractExtractor {
                 rank: i + 1,
                 score: this.hi!.slice(currentByte, 3).toHexNumber(),
                 name: this.hi!.slice(currentByte + 3, 3).toString(this.charset)
-            })
+            });
+            currentByte += 6;
         }
     }
 }
