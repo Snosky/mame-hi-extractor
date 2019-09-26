@@ -94,6 +94,7 @@ import Extractor8ballact from "./Extractor/8ballact";
 import Abcop from "./Extractor/Abcop";
 import Acrobatm from "./Extractor/Acrobatm";
 import Actionhw from "./Extractor/Actionhw";
+import Ad2083 from "./Extractor/Ad2083";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -111,6 +112,7 @@ let extractorsArray = [
     new Aburner2(),
     new Acrobatm(),
     new Actionhw(),
+    new Ad2083(),
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
