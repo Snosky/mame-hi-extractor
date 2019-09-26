@@ -112,6 +112,7 @@ import Aliensec from "./Extractor/Aliensec";
 import Aliensyn from "./Extractor/Aliensyn";
 import Alphaxz from "./Extractor/Alphaxz";
 import Amazon from "./Extractor/Amazon";
+import Angelkds from "./Extractor/Angelkds";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -146,6 +147,7 @@ let extractorsArray = [
     new Aliensec(),
     new Alphaxz(),
     new Amazon(),
+    new Angelkds(),
     new Aliensyn(),
     new Altbeast(),
     new Arkanoid(),
