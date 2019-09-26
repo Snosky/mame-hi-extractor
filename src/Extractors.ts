@@ -100,6 +100,7 @@ import Aerofgts from "./Extractor/Aerofgts";
 import Afighter from "./Extractor/Afighter";
 import Agallet from "./Extractor/Agallet";
 import Airass from "./Extractor/Airass";
+import Airattck from "./Extractor/Airattck";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -123,6 +124,7 @@ let extractorsArray = [
     new Afighter(),
     new Agallet(),
     new Airass(),
+    new Airattck(),
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
