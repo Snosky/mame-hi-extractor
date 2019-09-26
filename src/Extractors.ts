@@ -109,6 +109,7 @@ import Alexkidd from "./Extractor/Alexkidd";
 import Alien3 from "./Extractor/Alien3";
 import Aliens from "./Extractor/Aliens";
 import Aliensec from "./Extractor/Aliensec";
+import Aliensyn from "./Extractor/Aliensyn";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -141,6 +142,7 @@ let extractorsArray = [
     new Alien3(),
     new Aliens(),
     new Aliensec(),
+    new Aliensyn(),
     new Altbeast(),
     new Arkanoid(),
     new Asteroid(),
