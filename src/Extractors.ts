@@ -116,6 +116,7 @@ import Angelkds from "./Extractor/Angelkds";
 import Anteater from "./Extractor/Anteater";
 import Appoooh from "./Extractor/Appoooh";
 import Alpham2 from "./Extractor/Alpham2";
+import Ambush from "./Extractor/Ambush";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -153,6 +154,7 @@ let extractorsArray = [
     new Alphaxz(),
     new Altbeast(),
     new Amazon(),
+    new Ambush(),
     new Angelkds(),
     new Anteater(),
     new Appoooh(),
