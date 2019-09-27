@@ -120,6 +120,7 @@ import Ambush from "./Extractor/Ambush";
 import Aquajack from "./Extractor/Aquajack";
 import Arabfgt from "./Extractor/Arabfgt";
 import Arabian from "./Extractor/Arabian";
+import Argus from "./Extractor/Argus";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -164,6 +165,7 @@ let extractorsArray = [
     new Aquajack(),
     new Arabfgt(),
     new Arabian(),
+    new Argus(),
     new Arkanoid(),
     new Asteroid(),
     new Avsp(),
