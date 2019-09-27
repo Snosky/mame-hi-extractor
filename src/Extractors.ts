@@ -119,6 +119,7 @@ import Alpham2 from "./Extractor/Alpham2";
 import Ambush from "./Extractor/Ambush";
 import Aquajack from "./Extractor/Aquajack";
 import Arabfgt from "./Extractor/Arabfgt";
+import Arabian from "./Extractor/Arabian";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -162,6 +163,7 @@ let extractorsArray = [
     new Appoooh(),
     new Aquajack(),
     new Arabfgt(),
+    new Arabian(),
     new Arkanoid(),
     new Asteroid(),
     new Avsp(),
