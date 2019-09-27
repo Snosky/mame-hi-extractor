@@ -1,0 +1,43 @@
+import AbstractExtractor from "../AbstractExtractor";
+export default class Ambush extends AbstractExtractor {
+    protected charset: {
+        0x0A: string;
+        0x0B: string;
+        0x0C: string;
+        0x0D: string;
+        0x0E: string;
+        0x0F: string;
+        0x10: string;
+        0x11: string;
+        0x12: string;
+        0x13: string;
+        0x14: string;
+        0x15: string;
+        0x16: string;
+        0x17: string;
+        0x18: string;
+        0x19: string;
+        0x1A: string;
+        0x1B: string;
+        0x1C: string;
+        0x1D: string;
+        0x1E: string;
+        0x1F: string;
+        0x20: string;
+        0x21: string;
+        0x22: string;
+        0x23: string;
+        0x24: string;
+        0x25: string;
+        0x26: string;
+        0x27: string;
+        0x28: string;
+        0x29: string;
+        0x2C: string;
+        0x30: string;
+        0x3A: string;
+        0x4A: string;
+        0x4B: string;
+    };
+    extract(): any;
+}
