@@ -6,7 +6,8 @@ import Extractor from "../Decorator/Extractor";
 })
 export default class Bankp extends AbstractExtractor {
 protected charset = {
-        0x00: ' '
+        0x00: ' ',
+        0x3d: '.'
     };
     extract(): any {
         let currentByte = 0;
