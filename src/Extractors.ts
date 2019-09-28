@@ -122,6 +122,7 @@ import Arabfgt from "./Extractor/Arabfgt";
 import Arabian from "./Extractor/Arabian";
 import Argus from "./Extractor/Argus";
 import Arkarea from "./Extractor/Arkarea";
+import Bankp from "./Extractor/Bankp";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -171,6 +172,7 @@ let extractorsArray = [
     new Arkarea(),
     new Asteroid(),
     new Avsp(),
+    new Bankp(),
     new Batman(),
     new Bombjack(),
     new Bosco(),
