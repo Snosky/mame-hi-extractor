@@ -123,6 +123,7 @@ import Arabian from "./Extractor/Arabian";
 import Argus from "./Extractor/Argus";
 import Arkarea from "./Extractor/Arkarea";
 import Bankp from "./Extractor/Bankp";
+import Mazinger from "./Extractor/Mazinger";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -210,6 +211,7 @@ let extractorsArray = [
     new Kungfum(),
     new Mappy(),
     new Marble(),
+    new Mazinger(),
     new Mario(),
     new Mercs(),
     new Mk(),
