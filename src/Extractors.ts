@@ -129,6 +129,8 @@ import Dbreed from "./Extractor/Dbreed";
 import Demonwld from "./Extractor/Demonwld";
 import Digdug2 from "./Extractor/Digdug2";
 import Docastle from "./Extractor/Docastle";
+import Darius from "./Extractor/Darius";
+import Dorunrun from "./Extractor/dorunrun";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -202,6 +204,7 @@ let extractorsArray = [
     new Dkongjr(),
     new Docastle(),
     new Donpachi(),
+    new Dorunrun(),
     new Galaga(),
     new Galagamk(),
     new Gng(),
