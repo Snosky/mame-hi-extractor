@@ -125,6 +125,7 @@ import Arkarea from "./Extractor/Arkarea";
 import Bankp from "./Extractor/Bankp";
 import Mazinger from "./Extractor/Mazinger";
 import Zoar from "./Extractor/Zoar";
+import Dbreed from "./Extractor/Dbreed";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -185,6 +186,7 @@ let extractorsArray = [
     new Chasehq(),
     new Columns(),
     new Dangar(),
+    new Dbreed(),
     new Ddragon(),
     new Ddragon2(),
     new Ddsom(),
