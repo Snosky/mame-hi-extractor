@@ -124,6 +124,7 @@ import Argus from "./Extractor/Argus";
 import Arkarea from "./Extractor/Arkarea";
 import Bankp from "./Extractor/Bankp";
 import Mazinger from "./Extractor/Mazinger";
+import Zoar from "./Extractor/Zoar";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -251,6 +252,7 @@ let extractorsArray = [
     new Wboy(),
     new Xevious(),
     new Xmvsf(),
+    new Zoar(),
 ];
 
 let extractors: {[key: string]: AbstractExtractor} = {};
