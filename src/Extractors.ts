@@ -126,6 +126,7 @@ import Bankp from "./Extractor/Bankp";
 import Mazinger from "./Extractor/Mazinger";
 import Zoar from "./Extractor/Zoar";
 import Dbreed from "./Extractor/Dbreed";
+import Demonwld from "./Extractor/Demonwld";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -191,6 +192,7 @@ let extractorsArray = [
     new Ddragon2(),
     new Ddsom(),
     new Defender(),
+    new Demonwld(),
     new Digdug(),
     new Dkong(),
     new Dkong3(),
