@@ -128,6 +128,7 @@ import Zoar from "./Extractor/Zoar";
 import Dbreed from "./Extractor/Dbreed";
 import Demonwld from "./Extractor/Demonwld";
 import Digdug2 from "./Extractor/Digdug2";
+import Docastle from "./Extractor/Docastle";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -199,6 +200,7 @@ let extractorsArray = [
     new Dkong(),
     new Dkong3(),
     new Dkongjr(),
+    new Docastle(),
     new Donpachi(),
     new Galaga(),
     new Galagamk(),
