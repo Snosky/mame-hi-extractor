@@ -6,20 +6,16 @@ import Extractor from "../Decorator/Extractor";
 })
 export default class Zoar extends AbstractExtractor {
     extract(): any {
-        let currentByte = 3;
+        let scoreCurrentByte = 3;
+        let nameCurrentByte = 18;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
                 rank: i + 1,
-                score: this.hi!.slice(currentByte, 3).toHexNumber(),
-                name: ''
+                score: this.hi!.slice(scoreCurrentByte, 3).toHexNumber(),
+                name: this.hi!.slice(nameCurrentByte, 3).toString()
             });
-            currentByte += 3;
+            scoreCurrentByte += 3;
+            nameCurrentByte += 3;
         }
-        currentByte = 18; // Skip floor
-        for (let i = 0; i < 5; i++) {
-            this.output.default[i].name = this.hi!.slice(currentByte, 3).toString();
-            currentByte += 3;
-        }
-
     }
 }
