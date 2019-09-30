@@ -124,6 +124,13 @@ import Argus from "./Extractor/Argus";
 import Arkarea from "./Extractor/Arkarea";
 import Bankp from "./Extractor/Bankp";
 import Mazinger from "./Extractor/Mazinger";
+import Zoar from "./Extractor/Zoar";
+import Dbreed from "./Extractor/Dbreed";
+import Demonwld from "./Extractor/Demonwld";
+import Digdug2 from "./Extractor/Digdug2";
+import Docastle from "./Extractor/Docastle";
+import Darius from "./Extractor/Darius";
+import Dorunrun from "./Extractor/dorunrun";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -184,15 +191,20 @@ let extractorsArray = [
     new Chasehq(),
     new Columns(),
     new Dangar(),
+    new Dbreed(),
     new Ddragon(),
     new Ddragon2(),
     new Ddsom(),
     new Defender(),
+    new Demonwld(),
     new Digdug(),
+    new Digdug2(),
     new Dkong(),
     new Dkong3(),
     new Dkongjr(),
+    new Docastle(),
     new Donpachi(),
+    new Dorunrun(),
     new Galaga(),
     new Galagamk(),
     new Gng(),
@@ -251,6 +263,7 @@ let extractorsArray = [
     new Wboy(),
     new Xevious(),
     new Xmvsf(),
+    new Zoar(),
 ];
 
 let extractors: {[key: string]: AbstractExtractor} = {};
