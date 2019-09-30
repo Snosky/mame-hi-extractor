@@ -10,7 +10,7 @@ export default class Dbreed extends AbstractExtractor {
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
                 rank: i + 1,
-                score: this.hi!.slice(currentByte, 3).byteSwap(2).toHexNumber(),
+                score: this.hi!.slice(currentByte, 3).reverse().toHexNumber() * 100,
                 name: this.hi!.slice(currentByte + 4, 9).toString()
             });
             currentByte += 13;
