@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
 export default class Dorunrun extends AbstractExtractor {
 protected charset = {
         0x24: '?',
-        0x25: '&black-heart;',
+        0x25: ' ',
         0x5B: '.'
     };
     extract(): any {
