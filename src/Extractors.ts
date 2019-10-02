@@ -130,8 +130,8 @@ import Demonwld from "./Extractor/Demonwld";
 import Digdug2 from "./Extractor/Digdug2";
 import Docastle from "./Extractor/Docastle";
 import Darius from "./Extractor/Darius";
-import Dorunrun from "./Extractor/dorunrun";
 import Superman from "./Extractor/Superman";
+import Arknoid2 from "./Extractor/Arknoid2";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -179,6 +179,7 @@ let extractorsArray = [
     new Argus(),
     new Arkanoid(),
     new Arkarea(),
+    new Arknoid2(),
     new Asteroid(),
     new Avsp(),
     new Bankp(),
@@ -206,7 +207,6 @@ let extractorsArray = [
     new Dkongjr(),
     new Docastle(),
     new Donpachi(),
-    new Dorunrun(),
     new Galaga(),
     new Galagamk(),
     new Gng(),
