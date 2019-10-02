@@ -132,6 +132,7 @@ import Docastle from "./Extractor/Docastle";
 import Darius from "./Extractor/Darius";
 import Superman from "./Extractor/Superman";
 import Arknoid2 from "./Extractor/Arknoid2";
+import Dorunrun from "./Extractor/Dorunrun";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -207,6 +208,7 @@ let extractorsArray = [
     new Dkongjr(),
     new Docastle(),
     new Donpachi(),
+    new Dorunrun(),
     new Galaga(),
     new Galagamk(),
     new Gng(),
