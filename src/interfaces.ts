@@ -8,7 +8,8 @@ export interface Score {
     score: number;
     name: string;
     scoreSuffix?: string;
-    round?: number;
+    round?: string;
+    // character?: number; Character ID
 }
 
 export interface ExtractorOptions {
