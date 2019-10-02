@@ -131,6 +131,7 @@ import Digdug2 from "./Extractor/Digdug2";
 import Docastle from "./Extractor/Docastle";
 import Darius from "./Extractor/Darius";
 import Dorunrun from "./Extractor/dorunrun";
+import Superman from "./Extractor/Superman";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -191,6 +192,7 @@ let extractorsArray = [
     new Chasehq(),
     new Columns(),
     new Dangar(),
+    new Darius(),
     new Dbreed(),
     new Ddragon(),
     new Ddragon2(),
@@ -254,6 +256,7 @@ let extractorsArray = [
     new Spang(),
     new Spf2t(),
     new Starwars(),
+    new Superman(),
     new Suprmrio(),
     new Tetris(),
     new Tmnt(),
