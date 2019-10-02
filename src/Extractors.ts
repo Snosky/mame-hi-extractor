@@ -192,6 +192,7 @@ let extractorsArray = [
     new Chasehq(),
     new Columns(),
     new Dangar(),
+    new Darius(),
     new Dbreed(),
     new Ddragon(),
     new Ddragon2(),
