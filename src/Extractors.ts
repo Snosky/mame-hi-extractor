@@ -133,6 +133,7 @@ import Darius from "./Extractor/Darius";
 import Superman from "./Extractor/Superman";
 import Arknoid2 from "./Extractor/Arknoid2";
 import Dorunrun from "./Extractor/Dorunrun";
+import Armedf from "./Extractor/Armedf";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -181,6 +182,7 @@ let extractorsArray = [
     new Arkanoid(),
     new Arkarea(),
     new Arknoid2(),
+    new Armedf(),
     new Asteroid(),
     new Avsp(),
     new Bankp(),
