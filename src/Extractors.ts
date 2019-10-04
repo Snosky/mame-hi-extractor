@@ -135,6 +135,7 @@ import Arknoid2 from "./Extractor/Arknoid2";
 import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
+import Armwar from "./Extractor/Armwar";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -185,6 +186,7 @@ let extractorsArray = [
     new Arknoid2(),
     new Armedf(),
     new Armorcar(),
+    new Armwar(),
     new Asteroid(),
     new Avsp(),
     new Bankp(),
