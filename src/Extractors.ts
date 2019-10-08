@@ -132,6 +132,7 @@ import Docastle from "./Extractor/Docastle";
 import Darius from "./Extractor/Darius";
 import Dorunrun from "./Extractor/dorunrun";
 import Superman from "./Extractor/Superman";
+import Nemesis from "./Extractor/Nemesis";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -233,6 +234,7 @@ let extractorsArray = [
     new Mslug(),
     new Mslug2(),
     new Mwalk(),
+    new Nemesis(),
     new Outrun(),
     new Outzone(),
     new Pacland(),
