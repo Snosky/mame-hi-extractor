@@ -9,8 +9,9 @@ export interface Score {
     name: string;
     scoreSuffix?: string;
     round?: string;
-    // character?: number; Character ID
-}
+    character?: string; // Character ID
+    special?: string; // Special ID
+ }
 
 export interface ExtractorOptions {
     name: string,
