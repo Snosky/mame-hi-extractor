@@ -5,6 +5,10 @@ import Extractor from "../Decorator/Extractor";
     name: 'spidman'
 })
 export default class Spidman extends AbstractExtractor {
+    protected charset = {
+        0x00: ' '
+    }
+
     extract(): any {
 
         let currentByte = 0;
@@ -17,27 +21,32 @@ export default class Spidman extends AbstractExtractor {
         ];
 
         this.output.extras = {};
+        let globalRank = 1;
         for (const extra of extraIds) {
             this.output.extras[extra] = [];
             for (let i = 0; i < 4; i++) { // All extras hiscores are by group of 4
-                this.output.extras[extra].push({
+                let score = {
                     rank: i + 1,
                     score: this.hi!.slice(currentByte,3).readIntLE(),
-                    name: this.hi!.slice(currentByte + 4, 3).toString()
-                });
+                    name: this.hi!.slice(currentByte + 4, 3).toString(this.charset)
+                };
+                // character = extra
+
+                this.output.extras[extra].push(Object.assign({}, score));
+                score.rank = globalRank;
+                this.output.default.push(score);
                 currentByte += 8;
+                globalRank++;
             }
         }
-
-        currentByte = 0;
-
-        for (let i = 0; i < 16; i++) {
-            this.output.default.push({
-                rank: i + 1,
-                score: this.hi!.slice(currentByte, 3).readIntLE(),
-                name: this.hi!.slice(currentByte + 4, 3).toString()
-            });
-            currentByte += 8;
-        }
+        this.output.default.sort((scoreA, scoreB) => {
+            if (scoreA.score > scoreB.score) {
+                return -1;
+            } else if (scoreA.score < scoreB.score) {
+                return 1;
+            }
+            return 0;
+        });
+        this.output.default.map((score, index) => { score.rank = index + 1});
     }
 }
