@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Tetrisp from "./Extractor/Tetrisp";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -267,6 +268,7 @@ let extractorsArray = [
     new Superman(),
     new Suprmrio(),
     new Tetris(),
+    new Tetrisp(),
     new Tmnt(),
     new Toki(),
     new Trackfld(),
