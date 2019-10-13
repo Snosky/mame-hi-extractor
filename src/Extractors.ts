@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Cninja from "./Extractor/Cninja";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -198,6 +199,7 @@ let extractorsArray = [
     new Bublbobl(),
     new Centiped(),
     new Chasehq(),
+    new Cninja(),
     new Columns(),
     new Dangar(),
     new Darius(),
