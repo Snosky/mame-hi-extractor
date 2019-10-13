@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Ikari3 from "./Extractor/Ikari3";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -222,6 +223,7 @@ let extractorsArray = [
     new Hsf2(),
     new Hyperspt(),
     new Ikari(),
+    new Ikari3(),
     new Insectx(),
     new Intrepid(),
     new Invaddlx(),
