@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Ffight from "./Extractor/Ffight";
 import Galaga88 from "./Extractor/Galaga88";
 import Ikari3 from "./Extractor/Ikari3";
 import Ssriders from "./Extractor/Ssriders";
@@ -221,6 +222,7 @@ let extractorsArray = [
     new Docastle(),
     new Donpachi(),
     new Dorunrun(),
+    new Ffight(),
     new Galaga88(),
     new Galaga(),
     new Galagamk(),
