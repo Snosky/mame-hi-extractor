@@ -19,5 +19,6 @@ export default class Jack extends AbstractExtractor {
                 name: this.hi!.slice(i * 9 + 6, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

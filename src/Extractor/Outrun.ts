@@ -19,5 +19,6 @@ export default class Outrun extends AbstractExtractor {
             })
             currentByte += 14
         }
+        return this;
     }
 }

@@ -21,5 +21,6 @@ export default class Jackal extends AbstractExtractor {
                 name:this.hi!.slice(i * 8 + 4, 3).toString(this.charset, 48)
             })
         }
+        return this;
     }
 }

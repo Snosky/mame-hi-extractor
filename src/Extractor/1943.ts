@@ -23,5 +23,6 @@ export default class Extractor1943 extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 8, 3).toString(this.charset, 55)
             })
         }
+        return this;
     }
 }

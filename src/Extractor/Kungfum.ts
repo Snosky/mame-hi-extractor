@@ -17,8 +17,8 @@ export default class Kungfum extends AbstractExtractor {
                 rank: Math.abs(i - 20),
                 score: parseInt(this.hi!.slice(i * 6, 3).readIntBE().toString(16)) * 10,
                 name: this.hi!.slice(i * 6 + 3, 3).toString(this.charset)
-            })
+            });
         }
-
+        return this;
     }
 }

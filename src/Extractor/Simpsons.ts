@@ -25,5 +25,6 @@ export default class Simpsons extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(i * 8 + 3, 2).readIntBE().toString(16))
             });
         }
+        return this;
     }
 }

@@ -21,5 +21,6 @@ export default class Pacland extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 5, 5).toString(this.charset)
             });
         }
+        return this;
     }
 }

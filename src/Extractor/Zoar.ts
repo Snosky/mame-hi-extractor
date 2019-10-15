@@ -17,5 +17,6 @@ export default class Zoar extends AbstractExtractor {
             scoreCurrentByte += 3;
             nameCurrentByte += 3;
         }
+        return this;
     }
 }

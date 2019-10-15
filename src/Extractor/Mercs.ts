@@ -15,5 +15,6 @@ export default class Mercs extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

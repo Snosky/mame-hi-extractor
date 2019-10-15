@@ -10,6 +10,7 @@ export default class Punchout extends AbstractExtractor {
     extract(): any {
         this.extractNvram();
         this.extractHi();
+        return this;
     }
 
     protected extractNvram() {

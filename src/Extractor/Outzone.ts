@@ -24,5 +24,6 @@ export default class Outzone extends AbstractExtractor {
                 .byteMask('FF000000FF000000FF000000').toString(this.charset);
             currentByte += 16;
         }
+        return this;
     }
 }

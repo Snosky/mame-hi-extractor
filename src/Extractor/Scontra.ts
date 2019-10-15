@@ -22,5 +22,6 @@ export default class Scontra extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(i * 8 + 4, 4).readIntBE().toString(16))
             });
         }
+        return this;
     }
 }

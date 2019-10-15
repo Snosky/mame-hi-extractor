@@ -19,5 +19,6 @@ export default class Airattck extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

@@ -23,5 +23,6 @@ export default class Amazon extends AbstractExtractor {
             });
             currentByte += 14;
         }
+        return this;
     }
 }

@@ -22,5 +22,6 @@ export default class Armedf extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

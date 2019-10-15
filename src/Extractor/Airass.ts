@@ -27,5 +27,6 @@ export default class Airass extends AbstractExtractor {
             });
             currentByte += 14;
         }
+        return this;
     }
 }

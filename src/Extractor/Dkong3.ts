@@ -25,5 +25,6 @@ export default class Dkong3 extends AbstractExtractor {
                 name: name,
             });
         }
+        return this;
     }
 }

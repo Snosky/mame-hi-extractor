@@ -19,5 +19,6 @@ export default class Donpachi extends AbstractExtractor {
                 // TODO : Extras
             })
         }
+        return this;
     }
 }

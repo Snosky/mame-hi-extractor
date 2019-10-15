@@ -21,5 +21,6 @@ export default class Afighter extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

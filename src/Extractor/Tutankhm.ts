@@ -13,5 +13,6 @@ export default class Tutankhm extends AbstractExtractor {
                 name: this.hi!.slice(i * 6 + 3, 3).toString()
             });
         }
+        return this;
     }
 }

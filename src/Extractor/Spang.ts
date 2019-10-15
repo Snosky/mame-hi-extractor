@@ -55,5 +55,6 @@ export default class Spang extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

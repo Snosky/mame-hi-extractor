@@ -29,5 +29,6 @@ export default class Robotron extends AbstractExtractor {
             });
             currentByte += 14;
         }
+        return this;
     }
 }

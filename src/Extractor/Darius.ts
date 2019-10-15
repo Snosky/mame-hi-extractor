@@ -18,5 +18,6 @@ protected charset = {
             });
             currentByte += 18;
         }
+        return this;
     }
 }

@@ -18,5 +18,6 @@ export default class Pengo extends AbstractExtractor {
                 name: this.hi!.slice(i * 6 + 3, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

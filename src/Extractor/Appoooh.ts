@@ -21,5 +21,6 @@ export default class Appoooh extends AbstractExtractor {
             });
             currentByte += 11;
         }
+        return this;
     }
 }

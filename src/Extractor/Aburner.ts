@@ -20,5 +20,6 @@ export default class Aburner extends AbstractExtractor {
              });
              currentByte += 14;
          }
+        return this;
     }
 }

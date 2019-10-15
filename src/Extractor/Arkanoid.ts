@@ -16,5 +16,6 @@ export default class Arkanoid extends AbstractExtractor {
             });
             currentByte += 7;
         }
+        return this;
     }
 }

@@ -55,5 +55,6 @@ export default class Ambush extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }

@@ -20,5 +20,6 @@ export default class Alpham2 extends AbstractExtractor {
             scoreCurrentByte += 4;
             nameCurrentByte += 4;
         }
+        return this;
     }
 }

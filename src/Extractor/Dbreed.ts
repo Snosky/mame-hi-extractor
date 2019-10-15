@@ -15,5 +15,6 @@ export default class Dbreed extends AbstractExtractor {
             });
             currentByte += 13;
         }
+        return this;
     }
 }

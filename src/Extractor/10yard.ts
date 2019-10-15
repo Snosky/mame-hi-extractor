@@ -21,5 +21,6 @@ export default class Extractor10yard extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 }

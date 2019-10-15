@@ -17,5 +17,6 @@ export default class Agallet extends AbstractExtractor {
             scoreCurrentByte += 4;
             nameCurrentByte += 3;
         }
+        return this;
     }
 }

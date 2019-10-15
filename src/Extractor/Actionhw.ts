@@ -15,5 +15,6 @@ export default class Actionhw extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

@@ -13,5 +13,6 @@ export default class Mario extends AbstractExtractor {
                 name: this.hi!.slice(i * 34 + 15, 3).toString({}, 48)
             })
         }
+        return this;
     }
 }

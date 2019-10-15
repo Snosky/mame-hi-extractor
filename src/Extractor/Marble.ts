@@ -15,5 +15,6 @@ export default class Marble extends AbstractExtractor {
                 name: this.hi!.slice(i + 3, 2).decodeBase40()
             });
         }
+        return this;
     }
 }

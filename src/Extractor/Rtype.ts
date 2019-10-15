@@ -25,5 +25,6 @@ export default class Rtype extends AbstractExtractor {
             });
             currentByte += 11;
         }
+        return this;
     }
 }

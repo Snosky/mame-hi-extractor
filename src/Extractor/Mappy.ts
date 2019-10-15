@@ -16,7 +16,8 @@ export default class Mappy extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(i * 8, 3).readIntBE().toString(16)) * 10,
                 name: this.hi!.slice(i * 8 + 5, 3).toString(this.charset)
                 // TODO : Extras
-            })
+            });
         }
+        return this;
     }
 }

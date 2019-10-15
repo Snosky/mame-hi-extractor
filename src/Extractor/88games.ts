@@ -55,6 +55,7 @@ export default class Extractor88Games extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 
     protected formatScore(score: number, extra: string) {

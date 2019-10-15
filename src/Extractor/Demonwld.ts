@@ -20,5 +20,6 @@ protected charset = {
             scoreCurrentByte += 4;
             nameCurrentByte += 6;
         }
+        return this;
     }
 }

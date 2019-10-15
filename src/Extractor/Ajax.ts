@@ -20,5 +20,6 @@ export default class Ajax extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

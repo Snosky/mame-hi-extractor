@@ -42,6 +42,7 @@ export default class Hyperspt extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 
     protected formatScore(score: number, id: string) {
