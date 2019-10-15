@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'ikari3'
 })
 export default class Ikari3 extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 8;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -15,5 +15,6 @@ export default class Ikari3 extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }
