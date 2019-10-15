@@ -6,7 +6,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true,
 })
 export default class Marble extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let rank = 1;
         for (let i = 0; i < this.hi!.buffer.length; i += 5) {
             this.output.default.push({
@@ -15,5 +15,6 @@ export default class Marble extends AbstractExtractor {
                 name: this.hi!.slice(i + 3, 2).decodeBase40()
             });
         }
+        return this;
     }
 }

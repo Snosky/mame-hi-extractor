@@ -26,7 +26,7 @@ export default class Xmvsf extends AbstractExtractor {
         0x2B: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -34,5 +34,6 @@ export default class Xmvsf extends AbstractExtractor {
                 name: this.hi!.slice(i * 10 + 6, 3).toString(this.charset, 65)
             })
         }
+        return this;
     }
 }

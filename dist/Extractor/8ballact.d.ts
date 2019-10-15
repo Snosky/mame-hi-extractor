@@ -16,5 +16,5 @@ export default class Extractor8ballact extends AbstractExtractor {
         0x23: string;
         0x24: string;
     };
-    extract(): any;
+    extract(): this;
 }

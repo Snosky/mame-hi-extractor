@@ -5,5 +5,5 @@ export default class Aliensyn extends AbstractExtractor {
         0x5B: string;
         0x5C: string;
     };
-    extract(): any;
+    extract(): this;
 }

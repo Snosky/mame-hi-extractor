@@ -7,9 +7,10 @@ import MHEBuffer from "../MHEBuffer";
     nvram: 'nvram'
 })
 export default class Punchout extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         this.extractNvram();
         this.extractHi();
+        return this;
     }
 
     protected extractNvram() {

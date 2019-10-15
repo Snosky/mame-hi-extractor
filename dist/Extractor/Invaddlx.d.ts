@@ -4,5 +4,5 @@ export default class Invaddlx extends AbstractExtractor {
         0x1A: string;
         0x1B: string;
     };
-    extract(): any;
+    extract(): this;
 }

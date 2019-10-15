@@ -6,7 +6,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true
 })
 export default class Galaga extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
@@ -20,5 +20,6 @@ export default class Galaga extends AbstractExtractor {
             this.output.default[i].name = this.hi!.slice(currentByte, 3).toString({}, 55);
             currentByte += 3;
         }
+        return this;
     }
 }
