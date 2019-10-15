@@ -19,7 +19,7 @@ export default class Intrepid extends AbstractExtractor {
         0x09: '9',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 1;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({

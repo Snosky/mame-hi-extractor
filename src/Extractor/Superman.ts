@@ -9,7 +9,7 @@ protected charset = {
         0x5F: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 0;
         let nameCurrentByte = 7;
         for (let i = 0; i < 5; i++) {

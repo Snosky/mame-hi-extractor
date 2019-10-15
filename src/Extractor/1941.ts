@@ -6,7 +6,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true
 })
 export default class Extractor1941 extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 40;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({

@@ -12,7 +12,7 @@ export default class Argus extends AbstractExtractor {
         0x2E: '.',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 8; i++) {
             this.output.default.push({

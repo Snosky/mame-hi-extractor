@@ -10,7 +10,7 @@ export default class Pengo extends AbstractExtractor {
         0x5B: '.'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 4; i >= 0; i--) {
             this.scores.default.push({
                 rank: i + 1,

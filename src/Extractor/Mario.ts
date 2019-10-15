@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'mario'
 })
 export default class Mario extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,

@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'tutankhm'
 })
 export default class Tutankhm extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 7; i++) {
             this.scores.default.push({
                 rank: i + 1,

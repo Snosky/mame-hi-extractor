@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'avsp'
 })
 export default class Avsp extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 50; i++) {
             this.output.default.push({

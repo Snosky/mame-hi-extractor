@@ -13,7 +13,7 @@ export default class Dangar extends AbstractExtractor {
     /**
      * Scores are reversed, latest to first, so we doing the loop in reverse
      */
-    extract(): any {
+    extract(): this {
         let currentByte = 130;
         for (let i = 10; i > 0; i--) {
             this.scores.default.push({

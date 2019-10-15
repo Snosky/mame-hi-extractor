@@ -9,7 +9,7 @@ export default class Gng extends AbstractExtractor {
         0x1D: '.'
     };
 
-    extract(): any {
+    extract(): this {
         let positions: number[] = [];
 
         for (let i = 0; i < 10; i++) {

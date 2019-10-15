@@ -43,7 +43,7 @@ export default class Extractor1945kiii extends AbstractExtractor {
         0x3C: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({

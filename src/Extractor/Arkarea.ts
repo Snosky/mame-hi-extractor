@@ -11,7 +11,7 @@ export default class Arkarea extends AbstractExtractor {
         0x27: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let nameCurrentByte = 0;
         let scoreCurrentByte = 36;
         for (let i = 0; i < 5; i++) {

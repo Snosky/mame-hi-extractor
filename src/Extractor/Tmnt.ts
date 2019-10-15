@@ -14,7 +14,7 @@ export default class Tmnt extends AbstractExtractor {
         0x5F: '.',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 11; i++) {
             this.scores.default.push({
                 rank: i + 1,

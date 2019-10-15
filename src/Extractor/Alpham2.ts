@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'saveram'
 })
 export default class Alpham2 extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         this.nvram = this.nvram!.byteSwap(2);
         let scoreCurrentByte = 904;
         let nameCurrentByte = 944;

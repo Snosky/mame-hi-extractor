@@ -9,7 +9,7 @@ export default class Outzone extends AbstractExtractor {
         0x00: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 4;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({

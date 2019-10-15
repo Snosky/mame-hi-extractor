@@ -14,7 +14,7 @@ export default class Aliens extends AbstractExtractor {
         0x5B: '\'',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 8; i++) {
             this.output.default.push({

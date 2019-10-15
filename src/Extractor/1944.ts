@@ -18,7 +18,7 @@ export default class Extractor1944 extends AbstractExtractor {
         0x44: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 4;
         let byteToNames = 125; // Skip scores and bonus stats
         for (let i = 0; i < 10; i++) {

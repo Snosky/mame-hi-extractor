@@ -12,7 +12,7 @@ export default class Armedf extends AbstractExtractor {
         0x5E: '.'
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({

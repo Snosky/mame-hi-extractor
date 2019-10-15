@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'mazinger'
 })
 export default class Mazinger extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 4;
         for (let i = 0; i < 8; i++) {
             this.output.default.push({

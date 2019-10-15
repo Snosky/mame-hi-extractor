@@ -26,7 +26,7 @@ export default class Xmvsf extends AbstractExtractor {
         0x2B: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,

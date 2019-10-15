@@ -10,7 +10,7 @@ export default class Invaddlx extends AbstractExtractor {
         0x1B: ' '
     };
 
-    extract(): any {
+    extract(): this {
         this.scores.default.push({
             rank: 1,
             score: parseInt(this.hi!.slice(0, 2).readIntLE().toString(16)) * 10,

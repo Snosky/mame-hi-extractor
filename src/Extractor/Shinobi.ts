@@ -18,7 +18,7 @@ export default class Shinobi extends AbstractExtractor {
         0x2E: '=',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 20; i++) {
             this.scores.default.push({
                 rank: i + 1,

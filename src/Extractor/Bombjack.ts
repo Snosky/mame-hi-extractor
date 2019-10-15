@@ -11,7 +11,7 @@ export default class Bombjack extends AbstractExtractor {
         0x2E: '.',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 16;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
