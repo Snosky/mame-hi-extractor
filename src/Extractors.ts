@@ -138,6 +138,7 @@ import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
 import Ssriders from "./Extractor/Ssriders";
 import Spidman from "./Extractor/Spidman";
+import Cyberlip from "./Extractor/Cyberlip";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -201,6 +202,7 @@ let extractorsArray = [
     new Centiped(),
     new Chasehq(),
     new Columns(),
+    new Cyberlip(),
     new Dangar(),
     new Darius(),
     new Dbreed(),
