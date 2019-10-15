@@ -4,5 +4,5 @@ export default class Bosco extends AbstractExtractor {
         0x34: string;
         0x24: string;
     };
-    extract(): any;
+    extract(): this;
 }

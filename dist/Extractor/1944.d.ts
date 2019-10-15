@@ -11,5 +11,5 @@ export default class Extractor1944 extends AbstractExtractor {
         0x42: string;
         0x44: string;
     };
-    extract(): any;
+    extract(): this;
 }

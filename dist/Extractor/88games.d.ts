@@ -6,7 +6,7 @@ export default class Extractor88Games extends AbstractExtractor {
     protected defaultCharset: {
         0x0E: string;
     };
-    extract(): any;
+    extract(): this;
     protected formatScore(score: number, extra: string): number;
     protected getScoreSuffix(extra: string): "" | "m" | "s";
 }

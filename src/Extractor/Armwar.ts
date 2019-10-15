@@ -1,8 +1,17 @@
 import AbstractExtractor from "../AbstractExtractor";
 import Extractor from "../Decorator/Extractor";
+import {ScoreExtra} from "../interfaces";
 
 @Extractor({
-    name: 'armwar'
+    name: 'armwar',
+    data: {
+        characters: {
+            0x00: 'RASH',
+            0x04: 'JUSTICE',
+            0x08: 'GRAY',
+            0x12: 'SIREN',
+        }
+    }
 })
 export default class Armwar extends AbstractExtractor {
     protected charset = {
@@ -24,15 +33,22 @@ export default class Armwar extends AbstractExtractor {
         0x52: ' ',
     };
 
-    extract(): any {
+    extract(withExtra: boolean) {
         let currentByte = 0;
         for (let i = 0; i < 50; i++) {
-            this.output.default.push({
+            const index = this.output.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(currentByte, 4).toHexNumber(),
                 name: this.hi!.slice(currentByte + 4, 5).toString(this.charset, 65, 2)
             });
+
+            if (withExtra) {
+                this.output.default[index - 1].extra = {
+                    character: this.hi!.slice(currentByte + 9, 1).readIntBE()
+                } as ScoreExtra;
+            }
             currentByte += 12;
         }
+        return this;
     }
 }

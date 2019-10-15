@@ -6,5 +6,5 @@ export default class Argus extends AbstractExtractor {
         0x1C: string;
         0x2E: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -7,5 +7,5 @@ export default class Amazon extends AbstractExtractor {
         0x11: string;
         0x23: string;
     };
-    extract(): any;
+    extract(): this;
 }

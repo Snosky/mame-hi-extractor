@@ -8,5 +8,5 @@ export default class Popeye extends AbstractExtractor {
         0x28: string;
         0x29: string;
     };
-    extract(): any;
+    extract(): this;
 }

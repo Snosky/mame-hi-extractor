@@ -18,7 +18,7 @@ export default class Shinobi extends AbstractExtractor {
         0x2E: '=',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 20; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -26,5 +26,6 @@ export default class Shinobi extends AbstractExtractor {
                 name: this.hi!.slice(i * 8 + 5, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

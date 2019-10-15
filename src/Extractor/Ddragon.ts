@@ -10,7 +10,7 @@ export default class Ddragon extends AbstractExtractor {
         0x3C: ' '
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -18,5 +18,6 @@ export default class Ddragon extends AbstractExtractor {
                 name: this.hi!.slice(i * 6 + 3, 3).toString(this.charset, 32)
             });
         }
+        return this;
     }
 }

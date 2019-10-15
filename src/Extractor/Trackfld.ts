@@ -7,7 +7,7 @@ import Extractor from '../Decorator/Extractor';
     nvram: 'nvram'
 })
 export default class Trackfld extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 1024; // Jump first 1024 Bytes
 
         let extraIds = [
@@ -41,5 +41,6 @@ export default class Trackfld extends AbstractExtractor {
             });
             currentByte += 5;
         }
+        return this;
     }
 }

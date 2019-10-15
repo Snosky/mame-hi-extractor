@@ -9,7 +9,7 @@ protected charset = {
         0x00: ' ',
         0x3d: '.'
     };
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -19,5 +19,6 @@ protected charset = {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

@@ -5,7 +5,7 @@ import AbstractExtractor from "../AbstractExtractor";
     name: 'snowbros'
 })
 export default class Snowbros extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 4;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
@@ -20,5 +20,6 @@ export default class Snowbros extends AbstractExtractor {
             this.output.default[i].name = this.hi!.slice(currentByte, 6).byteSkip(false).toString();
             currentByte += 6;
         }
+        return this;
     }
 }

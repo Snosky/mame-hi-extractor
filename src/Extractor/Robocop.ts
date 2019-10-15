@@ -10,7 +10,7 @@ export default class Robocop extends AbstractExtractor {
         0x00: ''
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -18,5 +18,6 @@ export default class Robocop extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(i * 16 + 8, 4).readIntBE().toString(16))
             });
         }
+        return this;
     }
 }

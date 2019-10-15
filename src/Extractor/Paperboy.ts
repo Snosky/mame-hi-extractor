@@ -12,7 +12,7 @@ export default class Paperboy extends AbstractExtractor {
         0x20: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 66;
         for (let i = 0; i < 30; i++) {
             this.scores.default.push({
@@ -22,5 +22,6 @@ export default class Paperboy extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 }

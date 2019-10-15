@@ -37,7 +37,7 @@ export default class Xevious extends AbstractExtractor {
         0x50: '.'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -45,5 +45,6 @@ export default class Xevious extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 3, 10).toString(this.charset, 55)
             })
         }
+        return this;
     }
 }
