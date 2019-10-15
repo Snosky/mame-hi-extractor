@@ -9,7 +9,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true
 })
 export default class Aburner extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
          let currentByte = 0;
          for (let i = 0; i < 20; i++) {
              this.scores.default.push({
@@ -20,5 +20,6 @@ export default class Aburner extends AbstractExtractor {
              });
              currentByte += 14;
          }
+        return this;
     }
 }

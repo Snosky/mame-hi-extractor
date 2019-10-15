@@ -5,5 +5,5 @@ export default class Aerofgt extends AbstractExtractor {
         0x25: string;
         0x26: string;
     };
-    extract(): any;
+    extract(): this;
 }

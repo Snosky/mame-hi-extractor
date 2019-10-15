@@ -4,5 +4,6 @@ export default function Extractor(options: ExtractorOptions): <T extends new (..
         gameName: string;
         hasHi: boolean;
         nvramName: string | boolean;
+        data: import("../interfaces").ExtractorOptionsData | undefined;
     };
 } & T;

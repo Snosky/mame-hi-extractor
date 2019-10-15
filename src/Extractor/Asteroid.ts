@@ -6,7 +6,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true
 })
 export default class Asteroid extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentBytes = 0;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
@@ -21,5 +21,6 @@ export default class Asteroid extends AbstractExtractor {
             this.scores.default[i].name = this.hi!.slice(currentBytes, 3).toString({}, 54);
             currentBytes += 3;
         }
+        return this;
     }
 }

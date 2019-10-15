@@ -30,5 +30,5 @@ export default class Xevious extends AbstractExtractor {
         0x4F: string;
         0x50: string;
     };
-    extract(): any;
+    extract(): this;
 }

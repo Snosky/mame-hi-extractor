@@ -4,5 +4,5 @@ export default class Donpachi extends AbstractExtractor {
         0x00: string;
         0x38: string;
     };
-    extract(): any;
+    extract(): this;
 }

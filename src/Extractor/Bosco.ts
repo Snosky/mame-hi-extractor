@@ -11,7 +11,7 @@ export default class Bosco extends AbstractExtractor {
         0x24: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
@@ -25,5 +25,6 @@ export default class Bosco extends AbstractExtractor {
             this.scores.default[i].score = parseInt(this.hi!.buffer.readIntBE(currentByte, 4).toString(16));
             currentByte += 4;
         }
+        return this;
     }
 }

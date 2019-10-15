@@ -5,5 +5,5 @@ export default class Kungfum extends AbstractExtractor {
         0x2E: string;
         0x5B: string;
     };
-    extract(): any;
+    extract(): this;
 }

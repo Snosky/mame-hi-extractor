@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'columns',
 })
 export default class Columns extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 9; i++) {
             currentByte++; // Skip header
@@ -17,5 +17,6 @@ export default class Columns extends AbstractExtractor {
             });
             currentByte += 15;
         }
+        return this;
     }
 }

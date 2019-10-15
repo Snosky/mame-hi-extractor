@@ -5,5 +5,5 @@ export default class Extractor4dwarrio extends AbstractExtractor {
         0x29: string;
         0x6E: string;
     };
-    extract(): any;
+    extract(): this;
 }

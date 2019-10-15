@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'mslug2'
 })
 export default class Mslug2 extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
@@ -15,6 +15,6 @@ export default class Mslug2 extends AbstractExtractor {
             });
             currentByte += 10;
         }
-
+        return this;
     }
 }

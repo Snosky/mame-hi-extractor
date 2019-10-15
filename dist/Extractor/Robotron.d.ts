@@ -3,5 +3,5 @@ export default class Robotron extends AbstractExtractor {
     protected charset: {
         0x3A: string;
     };
-    extract(): any;
+    extract(): this;
 }

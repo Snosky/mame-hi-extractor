@@ -11,7 +11,7 @@ export default class Dkongjr extends AbstractExtractor {
         0x2C: '-'
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i< 5; i++) {
             currentByte += i ? 7 : 2; // Skip debug values
@@ -22,6 +22,6 @@ export default class Dkongjr extends AbstractExtractor {
             });
             currentByte += 27;
         }
-
+        return this;
     }
 }

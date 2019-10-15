@@ -1,7 +1,7 @@
 import {readFileSync} from "fs";
 import MHEBuffer from "./MHEBuffer";
 import {join} from 'path';
-import {Output} from "./interfaces";
+import {ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
 
 export default abstract class AbstractExtractor {
     private gameName = '';
@@ -10,6 +10,7 @@ export default abstract class AbstractExtractor {
 
     protected hi?: MHEBuffer;
     protected nvram?: MHEBuffer;
+    protected data?: ExtractorOptionsData;
 
     protected output: Output = {default: []};
 
@@ -20,12 +21,10 @@ export default abstract class AbstractExtractor {
         if (this.nvramName) {
             this.nvram = new MHEBuffer(readFileSync(join(filePath, 'nvram', this.gameName, this.nvramName)))
         }
-        this.output = {default: []};
-        this.extract();
         return this;
     }
 
-    abstract extract(): any;
+    abstract extract(withExtra?: boolean): this;
 
     public get scores(): Output {
         return this.output;
@@ -33,5 +32,12 @@ export default abstract class AbstractExtractor {
 
     public get name(): string {
         return this.gameName;
+    }
+
+    public get characters(): ExtractorOptionsDataCharacters|null {
+        if (this.data && this.data.characters) {
+            return this.data.characters;
+        }
+        return null;
     }
 }

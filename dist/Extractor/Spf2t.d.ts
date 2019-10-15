@@ -22,5 +22,5 @@ export default class Spf2t extends AbstractExtractor {
         0x2C: string;
         0x2D: string;
     };
-    extract(): any;
+    extract(): this;
 }

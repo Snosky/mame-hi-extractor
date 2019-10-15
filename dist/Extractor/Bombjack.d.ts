@@ -4,5 +4,5 @@ export default class Bombjack extends AbstractExtractor {
         0x00: string;
         0x2E: string;
     };
-    extract(): any;
+    extract(): this;
 }

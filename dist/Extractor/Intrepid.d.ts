@@ -13,5 +13,5 @@ export default class Intrepid extends AbstractExtractor {
         0x08: string;
         0x09: string;
     };
-    extract(): any;
+    extract(): this;
 }

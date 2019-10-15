@@ -11,5 +11,5 @@ export default class Airass extends AbstractExtractor {
         0x64: string;
         0x65: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -9,7 +9,7 @@ export default class Pang extends AbstractExtractor {
         0x7B: '&mid-dot;'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 9; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -17,5 +17,6 @@ export default class Pang extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 3, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }
