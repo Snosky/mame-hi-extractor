@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'ffight'
 })
 export default class Ffight extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 20;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
@@ -15,5 +15,6 @@ export default class Ffight extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }
