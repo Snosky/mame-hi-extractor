@@ -1,6 +1,6 @@
 import AbstractExtractor from '../AbstractExtractor';
 export default class Centiped extends AbstractExtractor {
-    extract(): void;
+    extract(): this;
     protected extractNvram(): void;
     protected extractHi(): void;
 }

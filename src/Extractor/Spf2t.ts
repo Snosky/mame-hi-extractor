@@ -28,7 +28,7 @@ export default class Spf2t extends AbstractExtractor {
         0x2D: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -36,5 +36,6 @@ export default class Spf2t extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 4, 3).toString(this.charset, 65)
             });
         }
+        return this;
     }
 }

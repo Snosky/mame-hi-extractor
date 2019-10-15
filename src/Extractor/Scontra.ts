@@ -14,7 +14,7 @@ export default class Scontra extends AbstractExtractor {
         0x10: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -22,5 +22,6 @@ export default class Scontra extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(i * 8 + 4, 4).readIntBE().toString(16))
             });
         }
+        return this;
     }
 }

@@ -14,7 +14,7 @@ export default class Popeye extends AbstractExtractor {
         0x29: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 1;
         let positions: number[] = [];
 
@@ -31,5 +31,6 @@ export default class Popeye extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 }

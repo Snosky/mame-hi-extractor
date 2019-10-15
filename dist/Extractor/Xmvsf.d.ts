@@ -20,5 +20,5 @@ export default class Xmvsf extends AbstractExtractor {
         0x2A: string;
         0x2B: string;
     };
-    extract(): any;
+    extract(): this;
 }

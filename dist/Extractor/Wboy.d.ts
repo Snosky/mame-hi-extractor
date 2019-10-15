@@ -7,5 +7,5 @@ export default class Wboy extends AbstractExtractor {
         0x7E: string;
         0x7F: string;
     };
-    extract(): any;
+    extract(): this;
 }

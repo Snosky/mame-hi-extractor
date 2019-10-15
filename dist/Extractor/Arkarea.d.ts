@@ -5,5 +5,5 @@ export default class Arkarea extends AbstractExtractor {
         0x26: string;
         0x27: string;
     };
-    extract(): any;
+    extract(): this;
 }

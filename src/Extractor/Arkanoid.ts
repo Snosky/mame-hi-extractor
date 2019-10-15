@@ -6,7 +6,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true
 })
 export default class Arkanoid extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
@@ -16,5 +16,6 @@ export default class Arkanoid extends AbstractExtractor {
             });
             currentByte += 7;
         }
+        return this;
     }
 }

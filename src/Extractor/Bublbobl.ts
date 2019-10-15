@@ -17,5 +17,6 @@ export default class Bublbobl extends AbstractExtractor {
             });
             currentByte += 7;
         }
+        return this;
     }
 }

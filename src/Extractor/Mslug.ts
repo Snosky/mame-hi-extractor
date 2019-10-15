@@ -50,7 +50,7 @@ export default class Mslug extends AbstractExtractor {
         0x0B40: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         this.nvram!.byteSwap(2);
         let currentByte = 804;
         for (let i = 0; i < 10; i++) {
@@ -61,6 +61,7 @@ export default class Mslug extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }
 

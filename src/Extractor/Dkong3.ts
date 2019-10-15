@@ -11,7 +11,7 @@ export default class Dkong3 extends AbstractExtractor {
         0x66: '.'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 7; i++){
             const score = parseInt(this.hi!.buffer.readIntLE(34 * i + 29, 3).toString(16));
             if (!score) {
@@ -25,5 +25,6 @@ export default class Dkong3 extends AbstractExtractor {
                 name: name,
             });
         }
+        return this;
     }
 }

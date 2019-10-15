@@ -13,7 +13,7 @@ export default class Wboy extends AbstractExtractor {
         0x7F: '&black-heart', // TODO : Special char
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 20; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -21,5 +21,6 @@ export default class Wboy extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 8, 3).toString(this.charset)
             })
         }
+        return this;
     }
 }

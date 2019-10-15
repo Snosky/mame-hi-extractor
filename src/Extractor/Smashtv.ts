@@ -7,7 +7,7 @@ import AbstractExtractor from "../AbstractExtractor";
     nvram: 'nvram'
 })
 export default class Smashtv extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 16400;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
@@ -17,5 +17,6 @@ export default class Smashtv extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

@@ -13,7 +13,7 @@ export default class Toki extends AbstractExtractor {
         0x5D: ']'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 20; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -21,5 +21,6 @@ export default class Toki extends AbstractExtractor {
                 name: this.hi!.slice(80 + i * 4 + 1, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

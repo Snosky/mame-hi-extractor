@@ -11,7 +11,7 @@ export default class Starwars extends AbstractExtractor {
         0x00: ' '
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 3; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -19,5 +19,6 @@ export default class Starwars extends AbstractExtractor {
                 name: this.nvram!.slice(32 + i * 6, 6).nibbleSkip().toString(this.charset, 64)
             });
         }
+        return this;
     }
 }
