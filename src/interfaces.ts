@@ -14,7 +14,7 @@ export interface Score {
 export interface ScoreExtra {
     round?: string;
     character?: number; // Character ID
-    stage?: number;
+    stage?: string;
 }
 
 export interface ExtractorOptions {
