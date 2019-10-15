@@ -7,5 +7,5 @@ export default class Jackal extends AbstractExtractor {
         0x0F: string;
         0x10: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -4,5 +4,5 @@ export default class Acrobatm extends AbstractExtractor {
         0x00: string;
         0x2E: string;
     };
-    extract(): any;
+    extract(): this;
 }

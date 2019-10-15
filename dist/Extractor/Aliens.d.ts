@@ -8,5 +8,5 @@ export default class Aliens extends AbstractExtractor {
         0x40: string;
         0x5B: string;
     };
-    extract(): any;
+    extract(): this;
 }

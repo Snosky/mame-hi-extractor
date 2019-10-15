@@ -8,5 +8,5 @@ export default class Pacmania extends AbstractExtractor {
         0x2C: string;
         0x2E: string;
     };
-    extract(): any;
+    extract(): this;
 }
