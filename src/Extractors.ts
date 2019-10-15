@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Cninja from "./Extractor/Cninja";
 import Ffight from "./Extractor/Ffight";
 import Galaga88 from "./Extractor/Galaga88";
 import Ikari3 from "./Extractor/Ikari3";
@@ -204,6 +205,7 @@ let extractorsArray = [
     new Bublbobl(),
     new Centiped(),
     new Chasehq(),
+    new Cninja(),
     new Columns(),
     new Cyberlip(),
     new Dangar(),
