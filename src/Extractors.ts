@@ -137,6 +137,7 @@ import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
 import Ssriders from "./Extractor/Ssriders";
+import Spidman from "./Extractor/Spidman";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -263,6 +264,7 @@ let extractorsArray = [
     new Snowbro2(),
     new Snowbros(),
     new Spang(),
+    new Spidman(),
     new Spf2t(),
     new Ssriders(),
     new Starwars(),

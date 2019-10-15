@@ -11,7 +11,7 @@ export default class Dkong extends AbstractExtractor {
         0x2C: '-'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -19,5 +19,6 @@ export default class Dkong extends AbstractExtractor {
                 name: this.hi!.slice(34 * i + 15, 3).toString(this.charset, 48)
             })
         }
+        return this;
     }
 }

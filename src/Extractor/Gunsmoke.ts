@@ -39,8 +39,9 @@ export default class Gunsmoke extends AbstractExtractor {
         0x65: '&black-star;',
         0x68: '?',
     };
+    // TODO : Fix charset;
 
-    extract(): any {
+    extract(): this {
         let currentBytes = 0;
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
@@ -50,5 +51,6 @@ export default class Gunsmoke extends AbstractExtractor {
             });
             currentBytes += 16;
         }
+        return this;
     }
 }

@@ -5,5 +5,5 @@ export default class Afighter extends AbstractExtractor {
         0x5C: string;
         0x5D: string;
     };
-    extract(): any;
+    extract(): this;
 }

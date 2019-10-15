@@ -7,5 +7,5 @@ export default class Dangar extends AbstractExtractor {
     /**
      * Scores are reversed, latest to first, so we doing the loop in reverse
      */
-    extract(): any;
+    extract(): this;
 }

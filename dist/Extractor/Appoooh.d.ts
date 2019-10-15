@@ -5,5 +5,5 @@ export default class Appoooh extends AbstractExtractor {
         0x3F: string;
         0x40: string;
     };
-    extract(): any;
+    extract(): this;
 }

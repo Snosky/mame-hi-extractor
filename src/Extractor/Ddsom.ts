@@ -25,9 +25,9 @@ export default class Ddsom extends AbstractExtractor {
         0x80: '9',
         0x81: ' ',
         0xFF: '',
-    }
+    };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -35,5 +35,6 @@ export default class Ddsom extends AbstractExtractor {
                 score: parseInt(this.hi!.buffer.readIntBE(i * 14 + 8, 4).toString(16))
             })
         }
+        return this;
     }
 }

@@ -10,6 +10,7 @@ export default class Centiped extends AbstractExtractor {
     extract() {
         this.extractNvram();
         this.extractHi();
+        return this;
     }
 
     protected extractNvram() {

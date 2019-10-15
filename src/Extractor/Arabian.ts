@@ -9,7 +9,7 @@ export default class Arabian extends AbstractExtractor {
         0x00: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -19,5 +19,6 @@ export default class Arabian extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 }

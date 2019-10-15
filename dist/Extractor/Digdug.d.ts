@@ -7,5 +7,5 @@ export default class Digdug extends AbstractExtractor {
     /**
      * Score are from last to first, reverse loop
      */
-    extract(): any;
+    extract(): this;
 }
