@@ -8,7 +8,7 @@ export default class Digdug2 extends AbstractExtractor {
 protected charset = {
         0x5B: '.'
     };
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({

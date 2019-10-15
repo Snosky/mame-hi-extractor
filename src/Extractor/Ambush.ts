@@ -45,7 +45,7 @@ export default class Ambush extends AbstractExtractor {
         0x4B: 'Z',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 3;
         for (let i = 0; i < 3; i++) {
             this.output.default.push({

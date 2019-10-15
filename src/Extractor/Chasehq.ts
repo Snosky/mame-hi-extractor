@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'chasehq'
 })
 export default class Chasehq extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             let byte = i * 16 + 6; // Each line is 16 bytes, skip 6 first bytes because it's useless
             this.scores.default.push({

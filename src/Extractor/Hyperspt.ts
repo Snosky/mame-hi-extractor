@@ -17,7 +17,7 @@ export default class Hyperspt extends AbstractExtractor {
         'horse',
     ];
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0; // Jump first 1024 Bytes
 
         this.output.extras = {};

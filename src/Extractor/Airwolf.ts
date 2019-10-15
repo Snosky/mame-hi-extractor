@@ -13,7 +13,7 @@ export default class Airwolf extends AbstractExtractor {
         0x5E: '‾',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             const score = this.hi!.slice(currentByte, 7).decodeBCD();

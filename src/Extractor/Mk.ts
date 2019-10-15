@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'nvram'
 })
 export default class Mk extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 6144; // Skip first 6144 bytes
         for (let i = 0; i < 15; i++) {
             this.scores.default.push({

@@ -15,7 +15,7 @@ export default class Extractor88Games extends AbstractExtractor {
         0x0E: '.'
     };
 
-    extract(): any {
+    extract(): this {
 
         let extraIds = [
             'run',

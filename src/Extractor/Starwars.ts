@@ -11,7 +11,7 @@ export default class Starwars extends AbstractExtractor {
         0x00: ' '
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 3; i++) {
             this.scores.default.push({
                 rank: i + 1,

@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'batman'
 })
 export default class Batman extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 16; i++) {
             this.output.default.push({

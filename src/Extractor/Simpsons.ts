@@ -17,7 +17,7 @@ export default class Simpsons extends AbstractExtractor {
         0x62: '$',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
