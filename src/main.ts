@@ -27,7 +27,3 @@ export default class MameHiExtractor {
         return !!extractors[romName];
     }
 }
-
-let a = new MameHiExtractor('/home/tpayen/.mame');
-console.log(a.get('armwar')!.extract(true).scores);
-
