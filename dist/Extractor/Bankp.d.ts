@@ -4,5 +4,5 @@ export default class Bankp extends AbstractExtractor {
         0x00: string;
         0x3d: string;
     };
-    extract(): any;
+    extract(): this;
 }

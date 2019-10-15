@@ -6,5 +6,5 @@ export default class Armedf extends AbstractExtractor {
         0x5D: string;
         0x5E: string;
     };
-    extract(): any;
+    extract(): this;
 }

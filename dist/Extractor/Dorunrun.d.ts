@@ -5,5 +5,5 @@ export default class Dorunrun extends AbstractExtractor {
         0x25: string;
         0x5B: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -8,5 +8,5 @@ export default class Tmnt extends AbstractExtractor {
         0x5E: string;
         0x5F: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -5,5 +5,5 @@ export default class Dkong extends AbstractExtractor {
         0x2B: string;
         0x2C: string;
     };
-    extract(): any;
+    extract(): this;
 }
