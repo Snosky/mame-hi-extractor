@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'cyberlip'
 })
 export default class Cyberlip extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -15,5 +15,6 @@ export default class Cyberlip extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }
