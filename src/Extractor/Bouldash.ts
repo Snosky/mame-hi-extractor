@@ -18,5 +18,6 @@ export default class Bouldash extends AbstractExtractor {
             });
             currentByte += 10;
         }
+        return this;
     }
 }

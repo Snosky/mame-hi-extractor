@@ -24,5 +24,6 @@ export default class Aliens extends AbstractExtractor {
             });
             currentByte += 7;
         }
+        return this;
     }
 }

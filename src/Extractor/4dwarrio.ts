@@ -21,5 +21,6 @@ export default class Extractor4dwarrio extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

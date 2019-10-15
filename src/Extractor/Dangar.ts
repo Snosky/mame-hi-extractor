@@ -23,5 +23,6 @@ export default class Dangar extends AbstractExtractor {
             });
             currentByte -= 13;
         }
+        return this;
     }
 }

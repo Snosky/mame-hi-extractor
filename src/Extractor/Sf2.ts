@@ -18,5 +18,6 @@ export default class Sf2 extends AbstractExtractor {
                 name: this.hi!.slice(i * 8 + 4, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

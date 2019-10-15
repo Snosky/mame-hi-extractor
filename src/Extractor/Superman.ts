@@ -21,5 +21,6 @@ protected charset = {
             scoreCurrentByte += 12;
             nameCurrentByte += 12;
         }
+        return this;
     }
 }

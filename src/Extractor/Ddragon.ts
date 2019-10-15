@@ -18,5 +18,6 @@ export default class Ddragon extends AbstractExtractor {
                 name: this.hi!.slice(i * 6 + 3, 3).toString(this.charset, 32)
             });
         }
+        return this;
     }
 }

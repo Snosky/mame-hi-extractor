@@ -18,5 +18,6 @@ export default class Abcop extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }

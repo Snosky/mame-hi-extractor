@@ -17,5 +17,6 @@ export default class Smashtv extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

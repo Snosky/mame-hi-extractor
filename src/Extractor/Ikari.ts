@@ -15,5 +15,6 @@ export default class Ikari extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

@@ -13,5 +13,6 @@ export default class Insectx extends AbstractExtractor {
                 name: this.hi!.slice(i * 8 + 4, 3).toString()
             })
         }
+        return this;
     }
 }

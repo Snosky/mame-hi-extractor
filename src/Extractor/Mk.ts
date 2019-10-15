@@ -17,5 +17,6 @@ export default class Mk extends AbstractExtractor {
             });
             currentByte += 18;
         }
+        return this;
     }
 }

@@ -18,5 +18,6 @@ export default class Tetris extends AbstractExtractor {
                 score: this.hi!.slice(i * 10 + 4, 4).readIntBE()
             })
         }
+        return this;
     }
 }

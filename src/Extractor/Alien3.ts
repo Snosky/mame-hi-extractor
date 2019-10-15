@@ -24,5 +24,6 @@ export default class Alien3 extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

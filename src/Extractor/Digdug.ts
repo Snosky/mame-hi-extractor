@@ -24,5 +24,6 @@ export default class Digdug extends AbstractExtractor {
                 name: this.nvram!.slice(nameByte, 3).toString(this.charset, 39)
             })
         }
+        return this;
     }
 }

@@ -15,5 +15,6 @@ export default class Avsp extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

@@ -18,5 +18,6 @@ export default class Robocop extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(i * 16 + 8, 4).readIntBE().toString(16))
             });
         }
+        return this;
     }
 }

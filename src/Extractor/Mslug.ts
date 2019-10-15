@@ -61,6 +61,7 @@ export default class Mslug extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }
 

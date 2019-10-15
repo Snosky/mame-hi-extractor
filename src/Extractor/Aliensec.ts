@@ -19,5 +19,6 @@ export default class Aliensec extends AbstractExtractor {
             });
             currentByte += 9 + 7;
         }
+        return this;
     }
 }

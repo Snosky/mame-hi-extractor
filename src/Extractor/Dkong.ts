@@ -19,5 +19,6 @@ export default class Dkong extends AbstractExtractor {
                 name: this.hi!.slice(34 * i + 15, 3).toString(this.charset, 48)
             })
         }
+        return this;
     }
 }

@@ -36,5 +36,6 @@ export default class Spf2t extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 4, 3).toString(this.charset, 65)
             });
         }
+        return this;
     }
 }

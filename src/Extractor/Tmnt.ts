@@ -22,5 +22,6 @@ export default class Tmnt extends AbstractExtractor {
                 name: this.hi!.slice(200 + i * 4, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

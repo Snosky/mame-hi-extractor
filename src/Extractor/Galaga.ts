@@ -20,5 +20,6 @@ export default class Galaga extends AbstractExtractor {
             this.output.default[i].name = this.hi!.slice(currentByte, 3).toString({}, 55);
             currentByte += 3;
         }
+        return this;
     }
 }

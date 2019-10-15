@@ -20,5 +20,6 @@ export default class Airbustr extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

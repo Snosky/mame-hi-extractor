@@ -21,5 +21,6 @@ export default class Wboy extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 8, 3).toString(this.charset)
             })
         }
+        return this;
     }
 }

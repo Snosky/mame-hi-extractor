@@ -22,6 +22,6 @@ export default class Dkongjr extends AbstractExtractor {
             });
             currentByte += 27;
         }
-
+        return this;
     }
 }

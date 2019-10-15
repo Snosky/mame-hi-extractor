@@ -17,5 +17,6 @@ export default class Extractor1941 extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

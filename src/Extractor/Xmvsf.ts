@@ -34,5 +34,6 @@ export default class Xmvsf extends AbstractExtractor {
                 name: this.hi!.slice(i * 10 + 6, 3).toString(this.charset, 65)
             })
         }
+        return this;
     }
 }

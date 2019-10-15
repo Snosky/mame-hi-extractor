@@ -40,5 +40,6 @@ export default class Joust extends AbstractExtractor {
             });
             currentByte += 14
         }
+        return this;
     }
 }

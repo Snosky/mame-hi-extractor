@@ -19,5 +19,6 @@ export default class Anteater extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 }

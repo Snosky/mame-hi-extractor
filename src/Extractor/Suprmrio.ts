@@ -22,6 +22,6 @@ export default class Suprmrio extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(69 + i * 7, 7).nibbleSkip().readIntBE().toString(16))
             });
         }
-
+        return this;
     }
 }

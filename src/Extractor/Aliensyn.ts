@@ -21,5 +21,6 @@ export default class Aliensyn extends AbstractExtractor {
             });
             currentByte += 10;
         }
+        return this;
     }
 }

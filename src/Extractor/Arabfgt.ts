@@ -20,5 +20,6 @@ export default class Arabfgt extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

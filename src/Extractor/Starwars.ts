@@ -19,5 +19,6 @@ export default class Starwars extends AbstractExtractor {
                 name: this.nvram!.slice(32 + i * 6, 6).nibbleSkip().toString(this.charset, 64)
             });
         }
+        return this;
     }
 }

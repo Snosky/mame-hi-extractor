@@ -17,5 +17,6 @@ export default class Columns extends AbstractExtractor {
             });
             currentByte += 15;
         }
+        return this;
     }
 }

@@ -19,5 +19,6 @@ export default class Airduel extends AbstractExtractor {
             });
             currentByte += 13;
         }
+        return this;
     }
 }

@@ -34,5 +34,6 @@ export default class Extractor8ballact extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

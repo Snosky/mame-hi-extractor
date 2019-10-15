@@ -21,5 +21,6 @@ export default class Alphaxz extends AbstractExtractor {
             scoreCurrentByte += 3;
             nameCurrentByte += 10;
         }
+        return this;
     }
 }
