@@ -13,7 +13,7 @@ export default class Pacland extends AbstractExtractor {
         0xE7: ' '
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -21,5 +21,6 @@ export default class Pacland extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 5, 5).toString(this.charset)
             });
         }
+        return this;
     }
 }

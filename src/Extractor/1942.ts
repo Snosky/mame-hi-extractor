@@ -22,7 +22,7 @@ export default class Extractor1942 extends AbstractExtractor {
         0x38: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 25; i++) {
             this.scores.default.push({
@@ -32,5 +32,6 @@ export default class Extractor1942 extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

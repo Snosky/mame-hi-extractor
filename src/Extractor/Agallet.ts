@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'agallet'
 })
 export default class Agallet extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 10;
         let nameCurrentByte = 50;
         for (let i = 0; i < 10; i++) {
@@ -17,5 +17,6 @@ export default class Agallet extends AbstractExtractor {
             scoreCurrentByte += 4;
             nameCurrentByte += 3;
         }
+        return this;
     }
 }

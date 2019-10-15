@@ -11,7 +11,7 @@ export default class Aerofgt extends AbstractExtractor {
         0x26: '-',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -21,5 +21,6 @@ export default class Aerofgt extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

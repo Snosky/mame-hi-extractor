@@ -6,5 +6,5 @@ export default class Pacland extends AbstractExtractor {
         0xE6: string;
         0xE7: string;
     };
-    extract(): any;
+    extract(): this;
 }

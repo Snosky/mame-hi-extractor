@@ -1,5 +1,6 @@
 import extractors from './Extractors';
 import {Output} from "./interfaces";
+import AbstractExtractor from "./AbstractExtractor";
 
 export default class MameHiExtractor {
     protected dir!: string;
@@ -12,9 +13,9 @@ export default class MameHiExtractor {
      * Return hiscores of a game
      * @param romName
      */
-    public get(romName: string): Output|undefined {
+    public get(romName: string): AbstractExtractor|undefined {
         if (extractors[romName]) {
-            return extractors[romName].init(this.dir).scores;
+            return extractors[romName].init(this.dir);
         }
     }
 

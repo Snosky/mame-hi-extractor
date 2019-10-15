@@ -19,7 +19,7 @@ export default class Extractor19xx extends AbstractExtractor {
         0xff: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 4;
         for (let i = 0; i < 11; i++) {
             this.output.default.push({
@@ -29,5 +29,6 @@ export default class Extractor19xx extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }

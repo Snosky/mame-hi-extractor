@@ -29,5 +29,6 @@ export default class Btime extends AbstractExtractor {
             this.scores.default[i].name = this.hi!.slice(currentByte, 3).toString(this.charset, 54);
             currentByte += 3;
         }
+        return this;
     }
 }

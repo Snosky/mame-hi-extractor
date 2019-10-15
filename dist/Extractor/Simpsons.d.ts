@@ -11,5 +11,5 @@ export default class Simpsons extends AbstractExtractor {
         0x61: string;
         0x62: string;
     };
-    extract(): any;
+    extract(): this;
 }

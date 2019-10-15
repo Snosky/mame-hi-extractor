@@ -11,7 +11,7 @@ export default class Afighter extends AbstractExtractor {
         0x5D: '.',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -21,5 +21,6 @@ export default class Afighter extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

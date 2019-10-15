@@ -6,5 +6,5 @@ export default class Angelkds extends AbstractExtractor {
         0x3B: string;
         0x3C: string;
     };
-    extract(): any;
+    extract(): this;
 }

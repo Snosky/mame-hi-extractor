@@ -21,5 +21,5 @@ export default class Ddsom extends AbstractExtractor {
         0x81: string;
         0xFF: string;
     };
-    extract(): any;
+    extract(): this;
 }

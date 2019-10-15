@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'actionhw'
 })
 export default class Actionhw extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
@@ -15,5 +15,6 @@ export default class Actionhw extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

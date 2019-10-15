@@ -11,7 +11,7 @@ export default class Robotron extends AbstractExtractor {
         0x3A: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 306;
 
         this.scores.default.push({
@@ -29,5 +29,6 @@ export default class Robotron extends AbstractExtractor {
             });
             currentByte += 14;
         }
+        return this;
     }
 }

@@ -6,6 +6,7 @@ export default function Extractor(options: ExtractorOptions) {
             gameName = options.name;
             hasHi = options.hi === undefined ? true : options.hi;
             nvramName = options.nvram || false;
+            data = options.data;
         }
     }
 }

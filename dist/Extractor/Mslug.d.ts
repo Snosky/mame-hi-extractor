@@ -42,5 +42,5 @@ export default class Mslug extends AbstractExtractor {
         0x0C4C: string;
         0x0B40: string;
     };
-    extract(): any;
+    extract(): this;
 }
