@@ -10,7 +10,7 @@ export default class Hsf2 extends AbstractExtractor {
         0x2E: '.',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i++; i < 5) {
             this.scores.default.push({

@@ -7,7 +7,7 @@ import MHEBuffer from "../MHEBuffer";
     name: 'jumpbug'
 })
 export default class Jumpbug extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         // Get only names
         for (let i = 0; i < 3; i++) {
             this.scores.default.push({

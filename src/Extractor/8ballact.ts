@@ -23,7 +23,7 @@ export default class Extractor8ballact extends AbstractExtractor {
         0x24: '9',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         console.log('a');
         for (let i = 0; i < 5; i++) {

@@ -14,7 +14,7 @@ export default class Suprmrio extends AbstractExtractor {
         0xFA: '\\',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,

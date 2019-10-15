@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'insectx'
 })
 export default class Insectx extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,

@@ -10,7 +10,7 @@ export default class Tetris extends AbstractExtractor {
         0x5E: '@'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,

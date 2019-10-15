@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'nvram'
 })
 export default class Defender extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 29; // Skip
         for (let i = 0; i < 8; i++) {
             this.scores.default.push({

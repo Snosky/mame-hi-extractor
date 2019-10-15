@@ -8,7 +8,7 @@ export default class Darius extends AbstractExtractor {
 protected charset = {
         0x00: ' '
     };
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 50; i++) {
             this.output.default.push({

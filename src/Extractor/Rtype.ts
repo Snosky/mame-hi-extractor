@@ -15,7 +15,7 @@ export default class Rtype extends AbstractExtractor {
         0x3F: '?',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 4;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({

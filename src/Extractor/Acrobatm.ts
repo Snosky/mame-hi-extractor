@@ -10,7 +10,7 @@ export default class Acrobatm extends AbstractExtractor {
         0x2E: '.',
     };
 
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 0;
         let nameCurrentByte = 42;
         for (let i = 0; i < 10; i++) {

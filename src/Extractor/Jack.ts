@@ -11,7 +11,7 @@ export default class Jack extends AbstractExtractor {
         0x5B: '.'
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,

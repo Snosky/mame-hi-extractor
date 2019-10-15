@@ -9,7 +9,7 @@ export default class Aliensec extends AbstractExtractor {
         0x62: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({

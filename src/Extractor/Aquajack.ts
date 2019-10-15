@@ -9,7 +9,7 @@ export default class Aquajack extends AbstractExtractor {
         0x5E: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 4;
         let nameCurrentByte = 64;
         for (let i = 0; i < 10; i++) {

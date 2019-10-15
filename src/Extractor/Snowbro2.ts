@@ -5,7 +5,7 @@ import AbstractExtractor from "../AbstractExtractor";
     name: 'snowbro2'
 })
 export default class Snowbro2 extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
                 rank: i + 1,

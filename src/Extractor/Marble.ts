@@ -6,7 +6,7 @@ import Extractor from '../Decorator/Extractor';
     hi: true,
 })
 export default class Marble extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let rank = 1;
         for (let i = 0; i < this.hi!.buffer.length; i += 5) {
             this.output.default.push({

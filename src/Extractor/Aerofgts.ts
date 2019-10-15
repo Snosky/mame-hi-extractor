@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'at28c16'
 })
 export default class Aerofgts extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 8;
         for (let i = 0; i < 5; i++) {
             this.output.default.push({

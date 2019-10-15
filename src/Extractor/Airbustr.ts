@@ -10,7 +10,7 @@ export default class Airbustr extends AbstractExtractor {
         0x40: '@',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 8; i++) {
             this.output.default.push({

@@ -41,7 +41,7 @@ export default class Gunsmoke extends AbstractExtractor {
     };
     // TODO : Fix charset;
 
-    extract(): any {
+    extract(): this {
         let currentBytes = 0;
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
