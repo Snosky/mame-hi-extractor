@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'nvram'
 })
 export default class Qbert extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 2562;
         for (let i = 22; i >= 0; i--) {
             this.scores.default.push({
@@ -17,5 +17,6 @@ export default class Qbert extends AbstractExtractor {
             });
             currentByte += 10;
         }
+        return this;
     }
 }

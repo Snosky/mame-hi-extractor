@@ -7,5 +7,5 @@ export default class Suprmrio extends AbstractExtractor {
         0xAF: string;
         0xFA: string;
     };
-    extract(): any;
+    extract(): this;
 }

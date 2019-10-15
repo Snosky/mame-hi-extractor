@@ -15,7 +15,7 @@ export default class Extractor88Games extends AbstractExtractor {
         0x0E: '.'
     };
 
-    extract(): any {
+    extract(): this {
 
         let extraIds = [
             'run',
@@ -55,6 +55,7 @@ export default class Extractor88Games extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 
     protected formatScore(score: number, extra: string) {

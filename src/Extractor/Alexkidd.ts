@@ -13,7 +13,7 @@ export default class Alexkidd extends AbstractExtractor {
         0x5F: '&',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 7; i++) {
             this.output.default.push({
@@ -23,5 +23,6 @@ export default class Alexkidd extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

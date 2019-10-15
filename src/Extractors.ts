@@ -136,6 +136,8 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Ssriders from "./Extractor/Ssriders";
+import Spidman from "./Extractor/Spidman";
 import Cyberlip from "./Extractor/Cyberlip";
 
 let extractorsArray = [
@@ -264,7 +266,9 @@ let extractorsArray = [
     new Snowbro2(),
     new Snowbros(),
     new Spang(),
+    new Spidman(),
     new Spf2t(),
+    new Ssriders(),
     new Starwars(),
     new Superman(),
     new Suprmrio(),

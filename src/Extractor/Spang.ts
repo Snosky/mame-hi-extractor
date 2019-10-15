@@ -34,7 +34,7 @@ export default class Spang extends AbstractExtractor {
         0xE2: 'Z'
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
@@ -55,5 +55,6 @@ export default class Spang extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

@@ -14,7 +14,7 @@ export default class Suprmrio extends AbstractExtractor {
         0xFA: '\\',
     };
 
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -22,6 +22,6 @@ export default class Suprmrio extends AbstractExtractor {
                 score: parseInt(this.hi!.slice(69 + i * 7, 7).nibbleSkip().readIntBE().toString(16))
             });
         }
-
+        return this;
     }
 }

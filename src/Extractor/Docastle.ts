@@ -8,7 +8,7 @@ export default class Docastle extends AbstractExtractor {
 protected charset = {
         0x5B: '.'
     };
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -18,5 +18,6 @@ protected charset = {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

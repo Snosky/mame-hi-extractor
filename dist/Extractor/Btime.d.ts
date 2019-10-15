@@ -7,5 +7,5 @@ export default class Btime extends AbstractExtractor {
         0xCE: string;
         0xCF: string;
     };
-    extract(): void;
+    extract(): this;
 }

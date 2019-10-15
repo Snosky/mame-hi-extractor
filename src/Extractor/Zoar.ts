@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'zoar'
 })
 export default class Zoar extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 3;
         let nameCurrentByte = 18;
         for (let i = 0; i < 5; i++) {
@@ -17,5 +17,6 @@ export default class Zoar extends AbstractExtractor {
             scoreCurrentByte += 3;
             nameCurrentByte += 3;
         }
+        return this;
     }
 }

@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'dbreed'
 })
 export default class Dbreed extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 10; i++) {
             this.output.default.push({
@@ -15,5 +15,6 @@ export default class Dbreed extends AbstractExtractor {
             });
             currentByte += 13;
         }
+        return this;
     }
 }

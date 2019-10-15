@@ -9,7 +9,7 @@ export default class Alphaxz extends AbstractExtractor {
         0x2A: ' '
     };
 
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 0;
         let nameCurrentByte = 30;
         for (let i = 0; i < 10; i++) {
@@ -21,5 +21,6 @@ export default class Alphaxz extends AbstractExtractor {
             scoreCurrentByte += 3;
             nameCurrentByte += 10;
         }
+        return this;
     }
 }

@@ -4,5 +4,5 @@ export default class Joust extends AbstractExtractor {
         0x0A: string;
         0x32: string;
     };
-    extract(): any;
+    extract(): this;
 }

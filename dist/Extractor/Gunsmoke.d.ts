@@ -34,5 +34,5 @@ export default class Gunsmoke extends AbstractExtractor {
         0x65: string;
         0x68: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'mwalk'
 })
 export default class Mwalk extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -13,5 +13,6 @@ export default class Mwalk extends AbstractExtractor {
                 name: this.hi!.slice(i * 8 + 5, 3).toString()
             });
         }
+        return this;
     }
 }
