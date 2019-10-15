@@ -8,5 +8,5 @@ export default class Rtype extends AbstractExtractor {
         0x3E: string;
         0x3F: string;
     };
-    extract(): any;
+    extract(): this;
 }

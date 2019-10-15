@@ -5,7 +5,7 @@ import Extractor from "../Decorator/Extractor";
     name: 'tutankhm'
 })
 export default class Tutankhm extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         for (let i = 0; i < 7; i++) {
             this.scores.default.push({
                 rank: i + 1,
@@ -13,5 +13,6 @@ export default class Tutankhm extends AbstractExtractor {
                 name: this.hi!.slice(i * 6 + 3, 3).toString()
             });
         }
+        return this;
     }
 }

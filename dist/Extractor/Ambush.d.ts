@@ -39,5 +39,5 @@ export default class Ambush extends AbstractExtractor {
         0x4A: string;
         0x4B: string;
     };
-    extract(): any;
+    extract(): this;
 }

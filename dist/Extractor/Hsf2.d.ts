@@ -4,5 +4,5 @@ export default class Hsf2 extends AbstractExtractor {
         0x20: string;
         0x2E: string;
     };
-    extract(): any;
+    extract(): this;
 }

@@ -137,6 +137,10 @@ import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
 import Galaga88 from "./Extractor/Galaga88";
+import Ikari3 from "./Extractor/Ikari3";
+import Ssriders from "./Extractor/Ssriders";
+import Spidman from "./Extractor/Spidman";
+import Cyberlip from "./Extractor/Cyberlip";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -200,6 +204,7 @@ let extractorsArray = [
     new Centiped(),
     new Chasehq(),
     new Columns(),
+    new Cyberlip(),
     new Dangar(),
     new Darius(),
     new Dbreed(),
@@ -224,6 +229,7 @@ let extractorsArray = [
     new Hsf2(),
     new Hyperspt(),
     new Ikari(),
+    new Ikari3(),
     new Insectx(),
     new Intrepid(),
     new Invaddlx(),
@@ -264,7 +270,9 @@ let extractorsArray = [
     new Snowbro2(),
     new Snowbros(),
     new Spang(),
+    new Spidman(),
     new Spf2t(),
+    new Ssriders(),
     new Starwars(),
     new Superman(),
     new Suprmrio(),

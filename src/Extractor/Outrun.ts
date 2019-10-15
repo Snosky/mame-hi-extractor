@@ -9,7 +9,7 @@ export default class Outrun extends AbstractExtractor {
         0x5B: '.'
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 0;
         for (let i = 0; i < 7; i++) {
             this.output.default.push({
@@ -19,5 +19,6 @@ export default class Outrun extends AbstractExtractor {
             })
             currentByte += 14
         }
+        return this;
     }
 }

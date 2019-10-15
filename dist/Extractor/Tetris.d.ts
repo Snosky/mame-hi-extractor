@@ -4,5 +4,5 @@ export default class Tetris extends AbstractExtractor {
         0x00: string;
         0x5E: string;
     };
-    extract(): any;
+    extract(): this;
 }

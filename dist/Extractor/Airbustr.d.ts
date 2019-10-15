@@ -4,5 +4,5 @@ export default class Airbustr extends AbstractExtractor {
         0x00: string;
         0x40: string;
     };
-    extract(): any;
+    extract(): this;
 }

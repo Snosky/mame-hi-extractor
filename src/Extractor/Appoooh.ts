@@ -11,7 +11,7 @@ export default class Appoooh extends AbstractExtractor {
         0x40: ' ',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 10;
         for (let i = 0; i < 21; i++) {
             this.output.default.push({
@@ -21,5 +21,6 @@ export default class Appoooh extends AbstractExtractor {
             });
             currentByte += 11;
         }
+        return this;
     }
 }

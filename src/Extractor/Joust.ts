@@ -12,7 +12,7 @@ export default class Joust extends AbstractExtractor {
         0x32: ':'
     };
 
-    extract(): any {
+    extract(): this {
         // Use only nvram, because hi is a duplicate of extra score 'Daily'
 
         let currentByte = 318; // Skip debug values
@@ -40,5 +40,6 @@ export default class Joust extends AbstractExtractor {
             });
             currentByte += 14
         }
+        return this;
     }
 }

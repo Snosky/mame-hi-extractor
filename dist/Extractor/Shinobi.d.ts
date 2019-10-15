@@ -12,5 +12,5 @@ export default class Shinobi extends AbstractExtractor {
         0x2B: string;
         0x2E: string;
     };
-    extract(): any;
+    extract(): this;
 }

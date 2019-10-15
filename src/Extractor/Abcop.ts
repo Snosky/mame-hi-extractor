@@ -7,7 +7,7 @@ import Extractor from "../Decorator/Extractor";
     nvram: 'mainpcb_backup1'
 })
 export default class Abcop extends AbstractExtractor {
-    extract(): any {
+    extract(): this {
         let currentByte = 268;
         this.nvram = this.nvram!.byteSwap(2);
         for (let i = 0; i < 7; i++) {
@@ -18,5 +18,6 @@ export default class Abcop extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }

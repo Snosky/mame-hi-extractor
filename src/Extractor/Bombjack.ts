@@ -11,7 +11,7 @@ export default class Bombjack extends AbstractExtractor {
         0x2E: '.',
     };
 
-    extract(): any {
+    extract(): this {
         let currentByte = 16;
         for (let i = 0; i < 10; i++) {
             this.scores.default.push({
@@ -28,5 +28,6 @@ export default class Bombjack extends AbstractExtractor {
             this.scores.default[i].name = this.hi!.slice(currentByte, 6).byteSkip(true).toString(this.charset);
             currentByte += 8;
         }
+        return this;
     }
 }

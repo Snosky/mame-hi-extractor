@@ -8,7 +8,7 @@ export default class Demonwld extends AbstractExtractor {
 protected charset = {
         0x5B: ' '
     };
-    extract(): any {
+    extract(): this {
         let scoreCurrentByte = 0;
         let nameCurrentByte = 80;
         for (let i = 0; i < 20; i++) {
@@ -20,5 +20,6 @@ protected charset = {
             scoreCurrentByte += 4;
             nameCurrentByte += 6;
         }
+        return this;
     }
 }
