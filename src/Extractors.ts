@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Ssriders from "./Extractor/Ssriders";
 
 let extractorsArray = [
     new Extractor4dwarrio(),
@@ -263,6 +264,7 @@ let extractorsArray = [
     new Snowbros(),
     new Spang(),
     new Spf2t(),
+    new Ssriders(),
     new Starwars(),
     new Superman(),
     new Suprmrio(),
