@@ -20,5 +20,6 @@ export default class Hsf2 extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

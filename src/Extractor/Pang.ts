@@ -17,5 +17,6 @@ export default class Pang extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 3, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

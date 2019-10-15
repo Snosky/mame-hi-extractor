@@ -20,6 +20,6 @@ protected charset = {
             });
             currentByte += 8;
         }
-
+        return this;
     }
 }

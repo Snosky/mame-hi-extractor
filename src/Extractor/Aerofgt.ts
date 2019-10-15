@@ -21,5 +21,6 @@ export default class Aerofgt extends AbstractExtractor {
             });
             currentByte += 16;
         }
+        return this;
     }
 }

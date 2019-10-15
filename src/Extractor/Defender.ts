@@ -17,5 +17,6 @@ export default class Defender extends AbstractExtractor {
             });
             currentByte += 12;
         }
+        return this;
     }
 }

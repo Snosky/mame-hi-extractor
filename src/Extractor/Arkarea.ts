@@ -23,5 +23,6 @@ export default class Arkarea extends AbstractExtractor {
             nameCurrentByte += 6;
             scoreCurrentByte += 6;
         }
+        return this;
     }
 }

@@ -21,5 +21,6 @@ export default class Aquajack extends AbstractExtractor {
             scoreCurrentByte += 4;
             nameCurrentByte += 4;
         }
+        return this;
     }
 }

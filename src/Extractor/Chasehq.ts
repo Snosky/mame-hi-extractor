@@ -14,5 +14,6 @@ export default class Chasehq extends AbstractExtractor {
                 name: this.hi!.slice(byte + 6, 3).toString()
             });
         }
+        return this;
     }
 }

@@ -31,5 +31,6 @@ export default class Popeye extends AbstractExtractor {
             });
             currentByte += 6;
         }
+        return this;
     }
 }

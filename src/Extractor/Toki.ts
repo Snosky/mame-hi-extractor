@@ -21,5 +21,6 @@ export default class Toki extends AbstractExtractor {
                 name: this.hi!.slice(80 + i * 4 + 1, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

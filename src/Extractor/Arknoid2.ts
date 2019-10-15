@@ -21,5 +21,6 @@ export default class Arknoid2 extends AbstractExtractor {
             }
             currentByte += 8;
         }
+        return this;
     }
 }

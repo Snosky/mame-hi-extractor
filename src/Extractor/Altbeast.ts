@@ -17,5 +17,6 @@ export default class Altbeast extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

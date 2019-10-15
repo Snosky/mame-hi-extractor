@@ -20,6 +20,7 @@ export default class Jumpbug extends AbstractExtractor {
         this.scores.default[0].score = this.getScore(21);
         this.scores.default[1].score = this.getScore(0);
         this.scores.default[2].score = this.getScore(6);
+        return this;
     }
 
     /**

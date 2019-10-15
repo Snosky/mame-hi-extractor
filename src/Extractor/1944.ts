@@ -30,5 +30,6 @@ export default class Extractor1944 extends AbstractExtractor {
             currentByte += 4;
             byteToNames += 6;
         }
+        return this;
     }
 }

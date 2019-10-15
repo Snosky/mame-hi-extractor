@@ -23,5 +23,6 @@ export default class Alexkidd extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

@@ -25,5 +25,6 @@ export default class Airwolf extends AbstractExtractor {
             });
             currentByte += 19;
         }
+        return this;
     }
 }

@@ -22,5 +22,6 @@ export default class Acrobatm extends AbstractExtractor {
             scoreCurrentByte += 4;
             nameCurrentByte += 8;
         }
+        return this;
     }
 }

@@ -53,5 +53,6 @@ export default class Extractor1945kiii extends AbstractExtractor {
             });
             currentByte += 10;
         }
+        return this;
     }
 }

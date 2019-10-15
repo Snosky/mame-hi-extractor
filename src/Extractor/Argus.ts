@@ -22,5 +22,6 @@ export default class Argus extends AbstractExtractor {
             });
             currentByte += 8;
         }
+        return this;
     }
 }

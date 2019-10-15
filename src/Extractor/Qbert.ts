@@ -17,5 +17,6 @@ export default class Qbert extends AbstractExtractor {
             });
             currentByte += 10;
         }
+        return this;
     }
 }

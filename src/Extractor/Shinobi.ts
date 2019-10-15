@@ -26,5 +26,6 @@ export default class Shinobi extends AbstractExtractor {
                 name: this.hi!.slice(i * 8 + 5, 3).toString(this.charset)
             });
         }
+        return this;
     }
 }

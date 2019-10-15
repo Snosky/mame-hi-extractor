@@ -33,6 +33,7 @@ export default class Gng extends AbstractExtractor {
                 return 1;
             }
             return 0;
-        })
+        });
+        return this;
     }
 }

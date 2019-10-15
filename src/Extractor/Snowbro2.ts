@@ -13,5 +13,6 @@ export default class Snowbro2 extends AbstractExtractor {
                 name: this.hi!.slice(i * 4 + 20 + 1, 3).toString()
             });
         }
+        return this;
     }
 }

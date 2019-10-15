@@ -41,5 +41,6 @@ export default class Trackfld extends AbstractExtractor {
             });
             currentByte += 5;
         }
+        return this;
     }
 }

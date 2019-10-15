@@ -15,5 +15,6 @@ export default class Ad2083 extends AbstractExtractor {
             });
             currentByte += 5;
         }
+        return this;
     }
 }

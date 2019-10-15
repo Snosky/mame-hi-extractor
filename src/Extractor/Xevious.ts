@@ -45,5 +45,6 @@ export default class Xevious extends AbstractExtractor {
                 name: this.hi!.slice(i * 16 + 3, 10).toString(this.charset, 55)
             })
         }
+        return this;
     }
 }

@@ -15,5 +15,6 @@ export default class Batman extends AbstractExtractor {
             });
             currentByte += 5;
         }
+        return this;
     }
 }
