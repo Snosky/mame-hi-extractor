@@ -1,38 +1,45 @@
 import AbstractExtractor from "../AbstractExtractor";
 import Extractor from "../Decorator/Extractor";
+import {Score} from "../interfaces";
 
 @Extractor({
-    name: 'spidman'
+    name: 'spidman',
+    data: {
+        characters: {
+            0x00: 'BlackCat',
+            0x01: 'Spidey',
+            0x02: 'HawkEye',
+            0x03: 'Namor',
+        }
+    }
 })
 export default class Spidman extends AbstractExtractor {
     protected charset = {
         0x00: ' '
-    }
+    };
 
-    extract(): any {
-
+    extract(withExtra = false): this {
         let currentByte = 0;
 
-        let extraIds = [
-            'BlackCat',
-            'Spidey',
-            'HawkEye',
-            'Namor'
-        ];
-
-        this.output.extras = {};
+        if (withExtra) {
+            this.output.extras = {};
+        }
         let globalRank = 1;
-        for (const extra of extraIds) {
-            this.output.extras[extra] = [];
+        for (let characterId = 0; characterId < 4; characterId++) {
+            if (withExtra) {
+                this.output.extras![this.characters![characterId]] = [];
+            }
             for (let i = 0; i < 4; i++) { // All extras hiscores are by group of 4
                 let score = {
                     rank: i + 1,
                     score: this.hi!.slice(currentByte,3).readIntLE(),
-                    name: this.hi!.slice(currentByte + 4, 3).toString(this.charset)
-                };
-                // character = extra
+                    name: this.hi!.slice(currentByte + 4, 3).toString(this.charset),
+                } as Score;
 
-                this.output.extras[extra].push(Object.assign({}, score));
+                if (withExtra) {
+                    score.extra = { character: characterId };
+                    this.output.extras![this.characters![characterId]].push(Object.assign({}, score));
+                }
                 score.rank = globalRank;
                 this.output.default.push(score);
                 currentByte += 8;
@@ -48,5 +55,6 @@ export default class Spidman extends AbstractExtractor {
             return 0;
         });
         this.output.default.map((score, index) => { score.rank = index + 1});
+        return this;
     }
 }
