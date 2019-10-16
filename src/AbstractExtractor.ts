@@ -1,7 +1,7 @@
 import {readFileSync} from "fs";
 import MHEBuffer from "./MHEBuffer";
 import {join} from 'path';
-import {ExtractorOptionsData, ExtractorOptionsDataCharacters, Output} from "./interfaces";
+import {ExtractorOptionsData, Output} from "./interfaces";
 
 export default abstract class AbstractExtractor {
     private gameName = '';
@@ -34,9 +34,16 @@ export default abstract class AbstractExtractor {
         return this.gameName;
     }
 
-    public get characters(): ExtractorOptionsDataCharacters|null {
+    public get characters(): { [key: number]: string }|null {
         if (this.data && this.data.characters) {
             return this.data.characters;
+        }
+        return null;
+    }
+
+    public get characterClass(): { [key: number]: string }|null {
+        if (this.data && this.data.characterClass) {
+            return this.data.characterClass;
         }
         return null;
     }

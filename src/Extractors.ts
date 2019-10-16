@@ -136,6 +136,7 @@ import Dorunrun from "./Extractor/Dorunrun";
 import Armedf from "./Extractor/Armedf";
 import Armorcar from "./Extractor/Armorcar";
 import Armwar from "./Extractor/Armwar";
+import Nemesis from "./Extractor/Nemesis";
 import Cninja from "./Extractor/Cninja";
 import Ffight from "./Extractor/Ffight";
 import Galaga88 from "./Extractor/Galaga88";
@@ -253,6 +254,7 @@ let extractorsArray = [
     new Mslug(),
     new Mslug2(),
     new Mwalk(),
+    new Nemesis(),
     new Outrun(),
     new Outzone(),
     new Pacland(),
