@@ -15,6 +15,7 @@ export interface ScoreExtra {
     round?: string;
     special?: string; // Special ID
     character?: number; // Character ID
+    characterClass?: number; // Character Class ID
     stage?: string;
 }
 
@@ -26,9 +27,6 @@ export interface ExtractorOptions {
 }
 
 export interface ExtractorOptionsData {
-    characters?: ExtractorOptionsDataCharacters;
-}
-
-export interface ExtractorOptionsDataCharacters {
-    [key: number]: string;
+    characters?: { [key: number]: string };
+    characterClass?: { [key: number]: string }
 }
