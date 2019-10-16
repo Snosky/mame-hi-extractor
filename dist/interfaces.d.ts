@@ -9,7 +9,7 @@ export interface Score {
     score: number;
     name: string;
     scoreSuffix?: string;
-    extra?: any;
+    extra?: ScoreExtra;
 }
 export interface ScoreExtra {
     round?: string;
