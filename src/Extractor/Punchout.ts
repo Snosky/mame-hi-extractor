@@ -1,6 +1,5 @@
 import AbstractExtractor from "../AbstractExtractor";
 import Extractor from "../Decorator/Extractor";
-import MHEBuffer from "../MHEBuffer";
 
 @Extractor({
     name: 'punchout',

@@ -1,7 +1,5 @@
 import AbstractExtractor from "../AbstractExtractor";
 import Extractor from "../Decorator/Extractor";
-import {log} from "util";
-import MHEBuffer from "../MHEBuffer";
 
 @Extractor({
     name: 'jumpbug'

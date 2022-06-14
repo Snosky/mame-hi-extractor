@@ -24,7 +24,6 @@ export default class Centiped extends AbstractExtractor {
     }
 
     protected extractHi() {
-        let currentBytes = 0;
         const startRank = this.scores.default.length;
         for (let i = 0; i < 5; i++) {
             this.scores.default.push({
@@ -32,7 +31,6 @@ export default class Centiped extends AbstractExtractor {
                 score: parseInt(this.hi!.buffer.readIntLE(i * 3, 3).toString(16)),
                 name: this.hi!.slice(i * 3 + 15, 3).toString({}, 64),
             });
-            currentBytes += 3;
         }
     }
 }

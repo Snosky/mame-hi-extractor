@@ -1,6 +1,5 @@
 import AbstractExtractor from "../AbstractExtractor";
 import Extractor from "../Decorator/Extractor";
-import {eventNames} from "cluster";
 import {Score} from "../interfaces";
 
 @Extractor({
