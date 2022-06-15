@@ -1,4 +1,4 @@
-import Ddragon from "./Ddragon";
+import Ddragon from "./ddragon";
 import Extractor from "../Decorator/Extractor";
 
 @Extractor({

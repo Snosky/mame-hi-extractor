@@ -1,4 +1,4 @@
-import Galaga from "./Galaga";
+import Galaga from "./galaga";
 import Extractor from "../Decorator/Extractor";
 
 @Extractor({

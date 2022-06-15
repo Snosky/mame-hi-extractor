@@ -1,4 +1,4 @@
-import Aburner from "./Aburner";
+import Aburner from "./aburner";
 import Extractor from "../Decorator/Extractor";
 
 @Extractor({

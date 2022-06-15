@@ -1,4 +1,4 @@
-import Mk from "./Mk";
+import Mk from "./mk";
 import Extractor from "../Decorator/Extractor";
 
 @Extractor({

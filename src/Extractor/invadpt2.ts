@@ -1,4 +1,4 @@
-import Invaddlx from "./Invaddlx";
+import Invaddlx from "./invaddlx";
 import Extractor from "../Decorator/Extractor";
 
 @Extractor({
