@@ -2,7 +2,7 @@ import { MameHiExtractor } from '../src'
 import { resolve } from "path";
 
 it('4dwarrio', async () => {
-    const a = new MameHiExtractor(resolve(__dirname, '../hiscores'))
+    const a = new MameHiExtractor(resolve(__dirname, '../demo-hiscores'))
     const extractor = await a.get('4dwarrio')
     expect(extractor?.extract().scores).toEqual({
         default: [
