@@ -29,7 +29,7 @@ export default class Extractor88Games extends AbstractExtractor {
         ];
 
         let currentByte = 880;
-        this.scores.extras = {test: []};
+        this.scores.extras = {};
 
         for (const extra of extraIds) {
             this.scores.extras[extra] = [];
