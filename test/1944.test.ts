@@ -1,7 +1,7 @@
 import { MameHiExtractor } from "../src";
 import { resolve } from "path";
 
-// TODO : Screenshot 1943
+// TODO : Screenshot 1944
 it('1944', async () => {
     const a = new MameHiExtractor(resolve(__dirname, '../demo-hiscores'))
     const extractor = await a.get('1944')
