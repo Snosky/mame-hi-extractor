@@ -9,7 +9,7 @@ export default class Airwolf extends AbstractExtractor {
         0x40: ' ',
         0x5B: '.',
         0x5C: ',',
-        0x5D: '¦',
+        0x5D: ';',
         0x5E: '‾',
     };
 
