@@ -23,7 +23,7 @@ export default class Airass extends AbstractExtractor {
             this.output.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(currentByte, 4).reverse().toHexNumber() * 10,
-                name: this.hi!.slice(currentByte + 4, 10).toString(this.charset).trimRight()
+                name: this.hi!.slice(currentByte + 4, 10).toString(this.charset)
             });
             currentByte += 14;
         }
