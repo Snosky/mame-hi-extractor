@@ -25,7 +25,6 @@ export default class Extractor8ballact extends AbstractExtractor {
 
     extract(): this {
         let currentByte = 0;
-        console.log('a');
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
                 rank: i + 1,

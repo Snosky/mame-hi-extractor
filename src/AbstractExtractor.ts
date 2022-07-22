@@ -16,7 +16,7 @@ export default abstract class AbstractExtractor {
 
     public init(filePath: string) {
         if (this.hasHi) {
-            this.hi = new MHEBuffer(readFileSync(join(filePath, 'hi', this.gameName + '.hi')));
+            this.hi = new MHEBuffer(readFileSync(join(filePath, 'hiscore', this.gameName + '.hi')));
         }
         if (this.nvramName) {
             this.nvram = new MHEBuffer(readFileSync(join(filePath, 'nvram', this.gameName, this.nvramName)))
