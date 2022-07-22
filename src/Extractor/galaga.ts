@@ -18,7 +18,7 @@ export default class Galaga extends AbstractExtractor {
         for (let i = 0; i < 5; i++) {
             this.output.default.push({
                 rank: i + 1,
-                score: this.hi!.slice(currentByte, 6).trim(0x24).decodeBCDLE(),
+                score: this.hi!.slice(currentByte, 5).trim(0x24).decodeBCDLE(),
                 name: ''
             });
             currentByte += 6;
