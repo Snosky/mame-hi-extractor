@@ -1,4 +1,4 @@
-import { MameHiExtractor } from "../src";
+import { MameHiExtractor } from "../dist";
 import { resolve } from "path";
 
 it('raiden', async () => {
@@ -26,7 +26,7 @@ it('raiden', async () => {
                 { rank: 6, score: 31410, name: ' ..' },
                 { rank: 7, score: 30000, name: '...' },
                 { rank: 8, score: 25000, name: '...' },
-                { rank: 9, score: 20000, name: '...' }  
+                { rank: 9, score: 20000, name: '...' }
             ],
         }
     })

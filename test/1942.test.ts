@@ -1,4 +1,4 @@
-import { MameHiExtractor } from "../src";
+import { MameHiExtractor } from "../dist";
 import { resolve } from "path";
 
 it('1942', async () => {
