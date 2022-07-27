@@ -1,2 +1,4 @@
 ./demo-hiscores
 ./test
+./node_modules
+.idea

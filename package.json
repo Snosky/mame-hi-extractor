@@ -9,6 +9,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
+    "prebuild": "node generate-extractors-dictionnary.cjs",
     "build": "tsc",
     "test": "jest"
   },

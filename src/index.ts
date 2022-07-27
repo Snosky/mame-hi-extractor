@@ -1,6 +1,5 @@
 import AbstractExtractor from "./AbstractExtractor";
-import { accessSync } from 'fs'
-import { resolve } from 'path'
+import extractors from "./Extractor";
 
 
 export class MameHiExtractor {
@@ -11,23 +10,14 @@ export class MameHiExtractor {
      * @param romName
      */
     public async get(romName: string): Promise<AbstractExtractor | undefined | void> {
-        const extractorImport = await import(this.extractorPath(romName))
-        return (new extractorImport.default()).init(this.dir)
+        return (new extractors[romName]()).init(this.dir)
     }
 
     /**
      * Check if hiscore extractor for a game exist
      * @param romName
      */
-    public exist(romName: string) {
-        try {
-            return accessSync(this.extractorPath(romName))
-        } catch (e) {
-            return false
-        }
-    }
-
-    protected extractorPath(romName: string): string {
-        return resolve(__dirname, 'Extractor', romName.toLowerCase() + '.ts')
+    public exist(romName: string): boolean {
+        return extractors[romName] !== undefined
     }
 }
