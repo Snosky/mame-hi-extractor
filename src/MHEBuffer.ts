@@ -9,7 +9,7 @@ export default class MHEBuffer {
         return new MHEBuffer(this.buffer.slice(begin, size ? begin! + size : size));
     }
 
-    public trim(trimNeedle: number): MHEBuffer {
+    public trimStart(trimNeedle: number): MHEBuffer {
         let i = 0;
         for (let buf of this.buffer) {
             if (buf === trimNeedle) {
@@ -19,7 +19,27 @@ export default class MHEBuffer {
             }
         }
         this.buffer = this.buffer.slice(i, this.buffer.byteLength - i);
+        console.log('trimStart', this.buffer)
         return this;
+    }
+
+    public trimEnd(trimNeedle: number): MHEBuffer {
+        let i = 0;
+        for (let y = this.buffer.byteLength - 1; y > 0; y--) {
+            if (this.buffer[y] === trimNeedle) {
+                i++;
+            } else {
+                break;
+            }
+        }
+        this.buffer = this.buffer.slice(0, this.buffer.byteLength - i);
+        console.log('trimEnd', this.buffer)
+        return this;
+    }
+
+    public trim(trimNeedle: number): MHEBuffer {
+        console.log('orig', this.buffer)
+        return this.trimStart(trimNeedle).trimEnd(trimNeedle);
     }
 
     public decodeBase40(): string {
