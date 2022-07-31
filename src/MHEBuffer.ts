@@ -19,7 +19,6 @@ export default class MHEBuffer {
             }
         }
         this.buffer = this.buffer.slice(i, this.buffer.byteLength - i);
-        console.log('trimStart', this.buffer)
         return this;
     }
 
@@ -33,12 +32,10 @@ export default class MHEBuffer {
             }
         }
         this.buffer = this.buffer.slice(0, this.buffer.byteLength - i);
-        console.log('trimEnd', this.buffer)
         return this;
     }
 
     public trim(trimNeedle: number): MHEBuffer {
-        console.log('orig', this.buffer)
         return this.trimStart(trimNeedle).trimEnd(trimNeedle);
     }
 
