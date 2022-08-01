@@ -6,7 +6,7 @@ import Extractor from "../Decorator/Extractor";
 })
 export default class Raiden extends AbstractExtractor {
     protected charset = {
-        /*0x63: '♥'*/
+        0x63: ' ' // ♥
 };
 
 extract(): this {
