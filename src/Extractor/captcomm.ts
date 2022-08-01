@@ -37,8 +37,7 @@ export default class Captcomm extends AbstractExtractor {
 
     extract(): this {
         let currentByte = 0;
-        for (let i = 0; i < 50; i++) {
-             
+        for (let i = 0; i < 50; i++) {             
             this.scores.default.push({
                 rank: i + 1,
                 score: this.hi!.slice(currentByte + 4, 4).toHexNumber(),
